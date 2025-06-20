@@ -553,13 +553,6 @@ export default function ConsultingLandingPage() {
                 Schedule Free Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-lg px-8 py-6 border-purple-300 text-purple-600 hover:bg-purple-50 hover:text-purple-700"
-              >
-                Download Case Studies
-              </Button>
             </div>
             <p className="text-sm text-gray-500">
               Free 30-minute consultation • No commitment required • Immediate insights
