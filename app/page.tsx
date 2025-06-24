@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Check, Brain, Code, Database, Shield, ArrowRight, Zap, TrendingUp } from "lucide-react"
+import { Check, Brain, Code, Database, Shield, ArrowRight, Zap, TrendingUp, Target, Users } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -56,7 +56,7 @@ export default function ConsultingLandingPage() {
             <Link href="#testimonials" className="text-sm font-medium text-gray-700 hover:text-black transition-colors">
               Testimonials
             </Link>
-            <Link href="#contact" className="text-sm font-medium text-gray-700 hover:text-black transition-colors">
+            <Link href="/contact" className="text-sm font-medium text-gray-700 hover:text-black transition-colors">
               Contact
             </Link>
           </nav>
@@ -65,7 +65,7 @@ export default function ConsultingLandingPage() {
             <Button
               variant="ghost"
               className="hidden md:inline-flex text-gray-700 hover:text-black hover:bg-gray-50"
-              onClick={() => window.open("https://calendly.com/darek-bitropy/call", "_blank")}
+              onClick={() => window.open("https://calendly.com/darekd/30min", "_blank")}
             >
               Schedule Call
             </Button>
@@ -157,17 +157,10 @@ export default function ConsultingLandingPage() {
               <Button
                 size="lg"
                 className="text-lg px-8 py-6 bg-black hover:bg-gray-800 text-white"
-                onClick={() => window.open("https://calendly.com/darek-bitropy/call", "_blank")}
+                onClick={() => window.open("https://calendly.com/darekd/30min", "_blank")}
               >
                 Book Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="text-lg px-8 py-6 border-gray-300 text-gray-700 hover:bg-gray-50 hover:text-black hover:border-gray-400"
-              >
-                View Case Studies
               </Button>
             </div>
 
@@ -233,11 +226,11 @@ export default function ConsultingLandingPage() {
               <span className="bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent"> Services</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-[800px] mx-auto">
-              End-to-end technology solutions delivered by specialized teams
+              End-to-end technology solutions delivered by specialized individuals and teams
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 w-full max-w-6xl mx-auto">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 w-full max-w-7xl mx-auto">
             <Card className="bg-white border-gray-200 hover:border-gray-400 hover:shadow-lg transition-all duration-300 group">
               <CardHeader className="text-center">
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-gray-100 group-hover:bg-gray-200 transition-all">
@@ -249,6 +242,36 @@ export default function ConsultingLandingPage() {
                 <CardDescription className="text-gray-600 text-center">
                   Strategic technology leadership without the full-time commitment. Architecture, team building, and
                   technical roadmaps.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border-gray-200 hover:border-gray-400 hover:shadow-lg transition-all duration-300 group">
+              <CardHeader className="text-center">
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-gray-100 group-hover:bg-gray-200 transition-all">
+                  <Target className="h-8 w-8 text-gray-800" />
+                </div>
+                <CardTitle className="text-black">Product Strategy</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-600 text-center">
+                  Product roadmap governance, engineering-to-product team alignment, feature prioritization frameworks,
+                  and strategic product planning to drive business outcomes.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border-gray-200 hover:border-gray-400 hover:shadow-lg transition-all duration-300 group">
+              <CardHeader className="text-center">
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-gray-100 group-hover:bg-gray-200 transition-all">
+                  <Users className="h-8 w-8 text-gray-800" />
+                </div>
+                <CardTitle className="text-black">Scaling Advisory</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-600 text-center">
+                  Expert guidance on scaling operations, optimizing processes, designing high-performance organizations,
+                  managing role transitions, and growing technology teams.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -276,7 +299,7 @@ export default function ConsultingLandingPage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-600 text-center">
-                  Machine learning implementation, data architecture, AI strategy, and intelligent automation systems.
+                  Machine learning implementation, data architecture, AI startegy, and intelligent automation systems.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -372,15 +395,17 @@ export default function ConsultingLandingPage() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 w-full max-w-6xl mx-auto">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 w-full max-w-7xl mx-auto">
             <Card className="bg-white border-gray-200 p-6 hover:shadow-lg hover:border-gray-300 transition-all">
               <CardContent className="space-y-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-gray-700 to-gray-800 rounded-lg flex items-center justify-center mb-4">
-                  <Code className="h-6 w-6 text-white" />
+                  <Shield className="h-6 w-6 text-white" />
                 </div>
+                <h3 className="font-semibold text-black mb-2">SaaS Security & Acquisition Readiness</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  [Please provide details from your LinkedIn about a company you worked with - I'll transform this into
-                  a case study narrative about the technology challenges solved and results achieved]
+                  Transformed a growing SaaS company's security posture and operational processes to prepare for
+                  acquisition. Implemented comprehensive security frameworks resulting in successful SOC 2 Type II and
+                  ISO 27001 certifications, significantly increasing company valuation and acquisition appeal.
                 </p>
               </CardContent>
             </Card>
@@ -388,11 +413,14 @@ export default function ConsultingLandingPage() {
             <Card className="bg-white border-gray-200 p-6 hover:shadow-lg hover:border-gray-300 transition-all">
               <CardContent className="space-y-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-gray-600 to-gray-700 rounded-lg flex items-center justify-center mb-4">
-                  <Database className="h-6 w-6 text-white" />
+                  <Brain className="h-6 w-6 text-white" />
                 </div>
+                <h3 className="font-semibold text-black mb-2">AI Startup Technical Leadership</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  [Please provide details from your LinkedIn about another company - I'll create a compelling case study
-                  about the technical solutions implemented]
+                  Served as Fractional CTO for an innovative AI startup, designing scalable architecture and overseeing
+                  end-to-end technical delivery of advanced software solutions with Large Language Model integrations.
+                  Established robust development practices and guided the technical team through rapid product
+                  iterations.
                 </p>
               </CardContent>
             </Card>
@@ -400,11 +428,27 @@ export default function ConsultingLandingPage() {
             <Card className="bg-white border-gray-200 p-6 hover:shadow-lg hover:border-gray-300 transition-all">
               <CardContent className="space-y-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-gray-800 to-black rounded-lg flex items-center justify-center mb-4">
-                  <Brain className="h-6 w-6 text-white" />
+                  <Code className="h-6 w-6 text-white" />
                 </div>
+                <h3 className="font-semibold text-black mb-2">Web3 Strategy & Smart Contract Development</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  [Please provide details from your LinkedIn about a third company - I'll craft a case study
-                  highlighting the strategic technology leadership provided]
+                  Led comprehensive technological strategy for a Web3 company and successfully implemented
+                  proof-of-concept smart contracts on Ethereum blockchain. Delivered complete Web3 DevOps pipeline with
+                  automated testing, deployment, and monitoring systems for decentralized applications.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border-gray-200 p-6 hover:shadow-lg hover:border-gray-300 transition-all">
+              <CardContent className="space-y-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-gray-500 to-gray-600 rounded-lg flex items-center justify-center mb-4">
+                  <Database className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="font-semibold text-black mb-2">Fashion Retail Data & AI Strategy</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Developed comprehensive data and AI strategy for an emerging fashion retail brand, implementing
+                  intelligent recommendation systems, inventory optimization algorithms, and customer behavior
+                  analytics. Created data-driven insights that improved conversion rates and operational efficiency.
                 </p>
               </CardContent>
             </Card>
@@ -443,7 +487,7 @@ export default function ConsultingLandingPage() {
               <CardContent className="space-y-4">
                 <Button
                   className="w-full bg-black hover:bg-gray-800 text-white"
-                  onClick={() => window.open("https://calendly.com/darek-bitropy/call", "_blank")}
+                  onClick={() => window.open("https://calendly.com/darekd/30min", "_blank")}
                 >
                   Get Started
                 </Button>
@@ -485,7 +529,7 @@ export default function ConsultingLandingPage() {
               <CardContent className="space-y-4">
                 <Button
                   className="w-full bg-black hover:bg-gray-800 text-white"
-                  onClick={() => window.open("https://calendly.com/darek-bitropy/call", "_blank")}
+                  onClick={() => window.open("https://calendly.com/darekd/30min", "_blank")}
                 >
                   Get Started
                 </Button>
@@ -580,7 +624,7 @@ export default function ConsultingLandingPage() {
               <Button
                 size="lg"
                 className="text-lg px-8 py-6 bg-black hover:bg-gray-800 text-white"
-                onClick={() => window.open("https://calendly.com/darek-bitropy/call", "_blank")}
+                onClick={() => window.open("https://calendly.com/darekd/30min", "_blank")}
               >
                 Schedule Free Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -611,23 +655,28 @@ export default function ConsultingLandingPage() {
               <h3 className="font-semibold text-black">Services</h3>
               <ul className="space-y-2 text-gray-600">
                 <li>
-                  <Link href="#" className="hover:text-black transition-colors">
+                  <Link href="#services" className="hover:text-black transition-colors">
                     Fractional CTO
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-black transition-colors">
+                  <Link href="#services" className="hover:text-black transition-colors">
+                    Product Strategy
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#services" className="hover:text-black transition-colors">
+                    Company Scaling
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#services" className="hover:text-black transition-colors">
                     Web3 & Blockchain
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-black transition-colors">
+                  <Link href="#services" className="hover:text-black transition-colors">
                     AI & Data Solutions
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-black transition-colors">
-                    Technology Strategy
                   </Link>
                 </li>
               </ul>
@@ -637,17 +686,17 @@ export default function ConsultingLandingPage() {
               <h3 className="font-semibold text-black">Company</h3>
               <ul className="space-y-2 text-gray-600">
                 <li>
-                  <Link href="#" className="hover:text-black transition-colors">
+                  <Link href="/" className="hover:text-black transition-colors">
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-black transition-colors">
+                  <Link href="#testimonials" className="hover:text-black transition-colors">
                     Case Studies
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-black transition-colors">
+                  <Link href="/contact" className="hover:text-black transition-colors">
                     Contact
                   </Link>
                 </li>
@@ -664,7 +713,7 @@ export default function ConsultingLandingPage() {
                 </li>
                 <li>
                   <Link
-                    href="https://calendly.com/darek-bitropy/call"
+                    href="https://calendly.com/darekd/30min"
                     className="hover:text-black transition-colors"
                     target="_blank"
                   >
