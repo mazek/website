@@ -73,7 +73,7 @@ export default function Footer() {
             <h3 className="font-semibold text-white">Connect</h3>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <Link href="#" className="hover:text-white transition-colors">
+                <Link href="https://www.linkedin.com/company/bitropy" className="hover:text-white transition-colors">
                   LinkedIn
                 </Link>
               </li>
