@@ -8,29 +8,16 @@ import Image from "next/image"
 import Link from "next/link"
 
 // Bitropy Logo Component
-function BitropyLogo({ className = "h-8 w-8" }: { className?: string }) {
+function BitropyLogo({ className = "h-12 w-auto" }: { className?: string }) {
   return (
-    <div className={`${className} relative`}>
-      <svg viewBox="0 0 32 32" className="w-full h-full">
-        <defs>
-          <linearGradient id="bitropyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#7c3aed" />
-            <stop offset="100%" stopColor="#3b0764" />
-          </linearGradient>
-        </defs>
-        {/* Background square */}
-        <rect width="32" height="32" rx="4" fill="url(#bitropyGradient)" />
-        {/* 3x3 grid of rounded squares */}
-        <rect x="6" y="6" width="4" height="4" rx="1" fill="white" />
-        <rect x="14" y="6" width="4" height="4" rx="1" fill="white" />
-        <rect x="22" y="6" width="4" height="4" rx="1" fill="white" />
-        <rect x="6" y="14" width="4" height="4" rx="1" fill="white" />
-        <rect x="14" y="14" width="4" height="4" rx="1" fill="white" />
-        <rect x="22" y="14" width="4" height="4" rx="1" fill="white" />
-        <rect x="6" y="22" width="4" height="4" rx="1" fill="white" />
-        <rect x="14" y="22" width="4" height="4" rx="1" fill="white" />
-        <rect x="22" y="22" width="4" height="4" rx="1" fill="white" />
-      </svg>
+    <div className={className}>
+      <Image
+        src="/images/Bitropy.svg"
+        alt="Bitropy"
+        width={120}
+        height={49}
+        className="w-full h-full"
+      />
     </div>
   )
 }
@@ -42,8 +29,8 @@ export default function ConsultingLandingPage() {
       <header className="sticky top-0 z-50 w-full border-b border-gray-800 bg-gray-900/95 backdrop-blur supports-[backdrop-filter]:bg-gray-900/60">
         <div className="w-full max-w-7xl mx-auto flex h-16 items-center justify-between px-4 md:px-6">
           <div className="flex items-center space-x-3">
-            <BitropyLogo />
-            <span className="text-xl font-bold text-purple-400">Bitropy</span>
+            <BitropyLogo className="h-10 w-auto" />
+            {/* <span className="text-xl font-bold text-purple-400">Bitropy</span> */}
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">
@@ -649,8 +636,7 @@ export default function ConsultingLandingPage() {
           <div className="grid gap-8 md:grid-cols-4">
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <BitropyLogo />
-                <span className="text-xl font-bold text-purple-400">bitropy.io</span>
+                <BitropyLogo />              
               </div>
               <p className="text-gray-300">
                 Strategic technology consulting for the modern enterprise. Fractional CTO, Web3, and AI expertise.
