@@ -1,13 +1,13 @@
 "use client"
 
+import Footer from "@/components/layout/Footer"
+import Header from "@/components/layout/Header"
+import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Check, Brain, Code, Database, Shield, ArrowRight, Zap, TrendingUp, Target, Users } from "lucide-react"
+import FlexibleEngagementModels from "@/components/ui/FlexibleEngagementModels"
+import { ArrowRight, Brain, Check, Code, Database, Shield, TrendingUp, Zap } from "lucide-react"
 import Image from "next/image"
-import Link from "next/link"
-import Header from "@/components/layout/Header"
-import Footer from "@/components/layout/Footer"
 
 export default function ConsultingLandingPage() {
   return (
@@ -85,13 +85,12 @@ export default function ConsultingLandingPage() {
               Scale Your Technology
               <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
                 {" "}
-                With Expert Teams
+                With T-shaped Services
               </span>
             </h1>
 
             <p className="text-xl text-gray-300 max-w-[800px] mx-auto leading-relaxed">
-              Expert technology consulting teams specializing in fractional leadership, Web3 & blockchain development,
-              and AI/data solutions. Scale your technology with dedicated specialists.
+            We architect secure, scalable systems—with no full-time hire.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -174,7 +173,8 @@ export default function ConsultingLandingPage() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 w-full max-w-7xl mx-auto">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 w-full max-w-7xl mx-auto">
+            {/* 1. Fractional CTO */}
             <Card className="bg-gray-900 border-gray-700 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 group">
               <CardHeader className="text-center">
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-purple-900/50 group-hover:bg-purple-800/50 transition-all">
@@ -184,42 +184,12 @@ export default function ConsultingLandingPage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-300 text-center">
-                  Strategic technology leadership without the full-time commitment. Architecture, team building, and
-                  technical roadmaps.
+                  Product strategy, roadmap governance, team scaling, architecture reviews
                 </CardDescription>
               </CardContent>
             </Card>
 
-            <Card className="bg-gray-900 border-gray-700 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 group">
-              <CardHeader className="text-center">
-                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-purple-900/50 group-hover:bg-purple-800/50 transition-all">
-                  <Target className="h-8 w-8 text-purple-400" />
-                </div>
-                <CardTitle className="text-white">Product Strategy</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-300 text-center">
-                  Product roadmap governance, engineering-to-product team alignment, feature prioritization frameworks,
-                  and strategic product planning to drive business outcomes.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gray-900 border-gray-700 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 group">
-              <CardHeader className="text-center">
-                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-purple-900/50 group-hover:bg-purple-800/50 transition-all">
-                  <Users className="h-8 w-8 text-purple-400" />
-                </div>
-                <CardTitle className="text-white">Scaling Advisory</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-300 text-center">
-                  Expert guidance on scaling operations, optimizing processes, designing high-performance organizations,
-                  managing role transitions, and growing technology teams.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
+            {/* 2. Web3 & Blockchain */}
             <Card className="bg-gray-900 border-gray-700 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 group">
               <CardHeader className="text-center">
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-purple-900/50 group-hover:bg-purple-800/50 transition-all">
@@ -229,21 +199,22 @@ export default function ConsultingLandingPage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-300 text-center">
-                  Smart contract development, DeFi protocols, NFT platforms, and blockchain integration strategies.
+                  Smart contracts, DeFi, secure infrastructure
                 </CardDescription>
               </CardContent>
             </Card>
 
+            {/* 3. AI & Data */}
             <Card className="bg-gray-900 border-gray-700 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 group">
               <CardHeader className="text-center">
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-purple-900/50 group-hover:bg-purple-800/50 transition-all">
                   <Database className="h-8 w-8 text-purple-400" />
                 </div>
-                <CardTitle className="text-white">Data & AI Solutions</CardTitle>
+                <CardTitle className="text-white">AI & Data</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-300 text-center">
-                  Machine learning implementation, data architecture, AI startegy, and intelligent automation systems.
+                  AI pipelines, analytics, automation, agentic workflows
                 </CardDescription>
               </CardContent>
             </Card>
@@ -404,150 +375,7 @@ export default function ConsultingLandingPage() {
       </section>
 
       {/* Engagement Models Section */}
-      <section className="py-20 md:py-32 bg-gray-900">
-        <div className="w-full max-w-7xl mx-auto px-4 md:px-6">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-white">
-              Flexible
-              <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
-                {" "}
-                Engagement Models
-              </span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-[800px] mx-auto">
-              Choose the engagement model that fits your needs and budget
-            </p>
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-3 max-w-5xl mx-auto w-full">
-            <Card className="bg-gray-900 border-gray-700 p-6 hover:border-gray-600 hover:shadow-lg hover:shadow-purple-500/20 transition-all">
-              <CardHeader>
-                <CardTitle className="text-2xl text-white">Strategic Advisory</CardTitle>
-                <CardDescription className="text-gray-300">
-                  Team-based consultation for early-stage guidance
-                </CardDescription>
-                <div className="mt-4">
-                  <span className="text-4xl font-bold text-white">$2,500</span>
-                  <span className="text-gray-400">/month</span>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <Button
-                  className="w-full bg-purple-600 hover:bg-purple-700 text-white"
-                  onClick={() => window.open("https://calendly.com/darekd/30min", "_blank")}
-                >
-                  Get Started
-                </Button>
-                <ul className="space-y-2">
-                  <li className="flex items-center space-x-2">
-                    <Check className="h-4 w-4 text-purple-400" />
-                    <span className="text-gray-300">Monthly strategy sessions</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <Check className="h-4 w-4 text-purple-400" />
-                    <span className="text-gray-300">Technology roadmap</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <Check className="h-4 w-4 text-purple-400" />
-                    <span className="text-gray-300">Architecture reviews</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <Check className="h-4 w-4 text-purple-400" />
-                    <span className="text-gray-300">Email support</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gray-900 border-purple-500 p-6 relative shadow-lg shadow-purple-500/20">
-              <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-purple-600 text-white">
-                Most Popular
-              </Badge>
-              <CardHeader>
-                <CardTitle className="text-2xl text-white">Technology Leadership</CardTitle>
-                <CardDescription className="text-gray-300">
-                  Hands-on technology leadership from expert teams
-                </CardDescription>
-                <div className="mt-4">
-                  <span className="text-4xl font-bold text-white">$8,500</span>
-                  <span className="text-gray-400">/month</span>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <Button
-                  className="w-full bg-purple-600 hover:bg-purple-700 text-white"
-                  onClick={() => window.open("https://calendly.com/darekd/30min", "_blank")}
-                >
-                  Get Started
-                </Button>
-                <ul className="space-y-2">
-                  <li className="flex items-center space-x-2">
-                    <Check className="h-4 w-4 text-purple-400" />
-                    <span className="text-gray-300">20 hours per month</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <Check className="h-4 w-4 text-purple-400" />
-                    <span className="text-gray-300">Team leadership</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <Check className="h-4 w-4 text-purple-400" />
-                    <span className="text-gray-300">Technical implementation</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <Check className="h-4 w-4 text-purple-400" />
-                    <span className="text-gray-300">Priority support</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <Check className="h-4 w-4 text-purple-400" />
-                    <span className="text-gray-300">Board meeting participation</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gray-900 border-gray-700 p-6 hover:border-gray-600 hover:shadow-lg hover:shadow-purple-500/20 transition-all">
-              <CardHeader>
-                <CardTitle className="text-2xl text-white">Full Engagement</CardTitle>
-                <CardDescription className="text-gray-300">Complete technology transformation</CardDescription>
-                <div className="mt-4">
-                  <span className="text-4xl font-bold text-white">Custom</span>
-                  <span className="text-gray-400"> pricing</span>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <Button
-                  variant="outline"
-                  className="w-full border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white"
-                >
-                  Contact Sales
-                </Button>
-                <ul className="space-y-2">
-                  <li className="flex items-center space-x-2">
-                    <Check className="h-4 w-4 text-purple-400" />
-                    <span className="text-gray-300">Full-time availability</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <Check className="h-4 w-4 text-purple-400" />
-                    <span className="text-gray-300">Custom solutions</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <Check className="h-4 w-4 text-purple-400" />
-                    <span className="text-gray-300">Dedicated team</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <Check className="h-4 w-4 text-purple-400" />
-                    <span className="text-gray-300">24/7 support</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <Check className="h-4 w-4 text-purple-400" />
-                    <span className="text-gray-300">Enterprise SLA</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+      <FlexibleEngagementModels />
 
       {/* Final CTA Section */}
       <section id="contact" className="py-20 md:py-32 relative overflow-hidden bg-gray-800">

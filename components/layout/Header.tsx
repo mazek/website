@@ -1,7 +1,7 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
 import BitropyLogo from "@/components/ui/BitropyLogo"
+import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
 interface HeaderProps {
@@ -13,13 +13,13 @@ export default function Header({ currentPage = "home" }: HeaderProps) {
     <header className="sticky top-0 z-50 w-full border-b border-gray-800 bg-gray-900/95 backdrop-blur supports-[backdrop-filter]:bg-gray-900/60">
       <div className="w-full max-w-7xl mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center space-x-3">
-          <BitropyLogo className="h-10 w-auto" />
+          <BitropyLogo className="h-12 w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center space-x-8">
           <Link 
             href="/#services" 
-            className={`text-sm font-medium transition-colors ${
+            className={`text-base font-medium transition-colors ${
               currentPage === "home" ? "text-gray-300 hover:text-white" : "text-gray-300 hover:text-white"
             }`}
           >
@@ -27,7 +27,7 @@ export default function Header({ currentPage = "home" }: HeaderProps) {
           </Link>
           <Link 
             href="/#expertise" 
-            className={`text-sm font-medium transition-colors ${
+            className={`text-base font-medium transition-colors ${
               currentPage === "home" ? "text-gray-300 hover:text-white" : "text-gray-300 hover:text-white"
             }`}
           >
@@ -35,7 +35,7 @@ export default function Header({ currentPage = "home" }: HeaderProps) {
           </Link>
           <Link 
             href="/#testimonials" 
-            className={`text-sm font-medium transition-colors ${
+            className={`text-base font-medium transition-colors ${
               currentPage === "home" ? "text-gray-300 hover:text-white" : "text-gray-300 hover:text-white"
             }`}
           >
@@ -43,7 +43,7 @@ export default function Header({ currentPage = "home" }: HeaderProps) {
           </Link>
           <Link 
             href="/contact" 
-            className={`text-sm font-medium transition-colors ${
+            className={`text-base font-medium transition-colors ${
               currentPage === "contact" ? "text-white" : "text-gray-300 hover:text-white"
             }`}
           >
