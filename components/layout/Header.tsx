@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
 interface HeaderProps {
-  currentPage?: "home" | "contact" | "privacy"
+  currentPage?: "home" | "contact" | "privacy" | "articles"
 }
 
 export default function Header({ currentPage = "home" }: HeaderProps) {
@@ -40,6 +40,14 @@ export default function Header({ currentPage = "home" }: HeaderProps) {
             }`}
           >
             Testimonials
+          </Link>
+          <Link 
+            href="/articles" 
+            className={`text-base font-medium transition-colors ${
+              currentPage === "articles" ? "text-white" : "text-gray-300 hover:text-white"
+            }`}
+          >
+            Articles
           </Link>
           <Link 
             href="/contact" 
