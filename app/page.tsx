@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import FlexibleEngagementModels from "@/components/ui/FlexibleEngagementModels"
-import { ArrowRight, Brain, Check, Code, Database, Shield, TrendingUp, Zap } from "lucide-react"
+import { ArrowRight, Brain, Code, Database, Shield, TrendingUp, Zap } from "lucide-react"
 import Image from "next/image"
 
 export default function ConsultingLandingPage() {
@@ -102,17 +102,6 @@ export default function ConsultingLandingPage() {
                 Book Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-            </div>
-
-            <div className="flex items-center justify-center space-x-8 text-sm text-gray-400">
-              <div className="flex items-center space-x-2">
-                <Check className="h-4 w-4 text-purple-400" />
-                <span>Free initial consultation</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Check className="h-4 w-4 text-purple-400" />
-                <span>Flexible engagement models</span>
-              </div>
             </div>
           </div>
         </div>
