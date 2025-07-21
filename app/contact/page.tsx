@@ -105,26 +105,6 @@ export default function ContactPage() {
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start">
             {/* Contact Information */}
             <div className="space-y-8">
-              {/* Profile Card */}
-              <Card className="bg-gray-800 border-gray-700 p-6">
-                <CardContent className="flex items-center space-x-6">
-                  <div className="relative">
-                    <Image
-                      src="/placeholder-user.jpg"
-                      alt="Darek Dwornikowski - CEO"
-                      width={120}
-                      height={120}
-                      className="rounded-full border-4 border-gray-700"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <h3 className="text-2xl font-bold text-white">Darek Dwornikowski</h3>
-                    <p className="text-lg text-gray-300">Technology Consultant & Fractional CTO</p>
-                    <p className="text-gray-400">Founder, CEO, Bitropy.io</p>
-                  </div>
-                </CardContent>
-              </Card>
-
               {/* Contact Details */}
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -134,7 +114,9 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-white mb-1">Office Address</h3>
                     <p className="text-gray-300">
-                      Bitropy sp. zoo (in organisation)
+                      Bitropy sp. z o.o.o
+                      <br /> 
+                      Regsitered in the National Court Register under 0001182638 
                       <br />
                       Hanny Malewskiej 24/1
                       <br />
