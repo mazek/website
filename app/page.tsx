@@ -5,8 +5,7 @@ import Header from "@/components/layout/Header"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import FlexibleEngagementModels from "@/components/ui/FlexibleEngagementModels"
-import { ArrowRight, Brain, Code, Database, Shield, TrendingUp, Zap } from "lucide-react"
+import { ArrowRight, Brain, Code, Database, Shield, TrendingUp, Zap, Users, FileSearch, UserCheck } from "lucide-react"
 import Image from "next/image"
 
 export default function ConsultingLandingPage() {
@@ -207,6 +206,51 @@ export default function ConsultingLandingPage() {
                 </CardDescription>
               </CardContent>
             </Card>
+
+            {/* 4. Startup Founder Advisory */}
+            <Card className="bg-gray-900 border-gray-700 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 group">
+              <CardHeader className="text-center">
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-purple-900/50 group-hover:bg-purple-800/50 transition-all">
+                  <Users className="h-8 w-8 text-purple-400" />
+                </div>
+                <CardTitle className="text-white">Startup Founder Advisory</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-300 text-center">
+                  Strategic guidance for founders, external vendor intermediation, value creation partnerships
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            {/* 5. Architecture Review & Build Up */}
+            <Card className="bg-gray-900 border-gray-700 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 group">
+              <CardHeader className="text-center">
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-purple-900/50 group-hover:bg-purple-800/50 transition-all">
+                  <FileSearch className="h-8 w-8 text-purple-400" />
+                </div>
+                <CardTitle className="text-white">Architecture Review & Build Up</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-300 text-center">
+                  System architecture assessment, scalability planning, technical infrastructure development
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            {/* 6. Board Technology Advisory */}
+            <Card className="bg-gray-900 border-gray-700 hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 group">
+              <CardHeader className="text-center">
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-purple-900/50 group-hover:bg-purple-800/50 transition-all">
+                  <UserCheck className="h-8 w-8 text-purple-400" />
+                </div>
+                <CardTitle className="text-white">Board Technology Advisory</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-gray-300 text-center">
+                  Executive technology guidance, strategic planning, board-level technical expertise
+                </CardDescription>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -362,9 +406,6 @@ export default function ConsultingLandingPage() {
           </div>
         </div>
       </section>
-
-      {/* Engagement Models Section */}
-      <FlexibleEngagementModels />
 
       {/* Final CTA Section */}
       <section id="contact" className="py-20 md:py-32 relative overflow-hidden bg-gray-800">
