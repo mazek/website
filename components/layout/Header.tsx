@@ -8,7 +8,7 @@ import { Menu } from "lucide-react"
 import Link from "next/link"
 
 interface HeaderProps {
-  currentPage?: "home" | "contact" | "privacy" | "articles"
+  currentPage?: "home" | "about" | "privacy" | "articles"
 }
 
 export default function Header({ currentPage = "home" }: HeaderProps) {
@@ -54,12 +54,12 @@ export default function Header({ currentPage = "home" }: HeaderProps) {
             Articles
           </Link>
           <Link 
-            href="/contact" 
+            href="/about" 
             className={`text-base font-medium transition-colors ${
-              currentPage === "contact" ? "text-white" : "text-gray-300 hover:text-white"
+              currentPage === "about" ? "text-white" : "text-gray-300 hover:text-white"
             }`}
           >
-            Contact
+            About
           </Link>
         </nav>
 
@@ -101,8 +101,8 @@ export default function Header({ currentPage = "home" }: HeaderProps) {
                   </Link>
                 </DrawerClose>
                 <DrawerClose asChild>
-                  <Link href="/contact" className="text-lg font-medium text-white hover:text-primary transition-colors">
-                    Contact
+                  <Link href="/about" className="text-lg font-medium text-white hover:text-primary transition-colors">
+                    About
                   </Link>
                 </DrawerClose>
                 <DrawerClose asChild>
