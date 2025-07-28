@@ -2,15 +2,16 @@
 
 export default function AnimatedBitropyDots() {
   return (
-    <div className="relative w-full h-full flex items-center justify-center">
-      <div className="relative w-80 h-80">
+    <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+      <div className="relative w-80 h-80 flex items-center justify-center">
         <svg 
-          width="100%" 
-          height="100%" 
+          width="240" 
+          height="320" 
           viewBox="0 0 310 477" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg"
-          className="scale-75"
+          className="will-change-transform transform-gpu"
+          style={{ transform: 'translateZ(0)' }}
         >
           {/* Purple dots layer with floating animation */}
           <g className="animate-float-gentle">
@@ -75,42 +76,46 @@ export default function AnimatedBitropyDots() {
       {/* CSS animations */}
       <style jsx>{`
         @keyframes float-gentle {
-          0%, 100% { transform: translate(0px, 0px) rotate(0deg); }
-          25% { transform: translate(-5px, -8px) rotate(1deg); }
-          50% { transform: translate(8px, -3px) rotate(-1deg); }
-          75% { transform: translate(-3px, 5px) rotate(0.5deg); }
+          0%, 100% { transform: translate3d(0px, 0px, 0px) rotate(0deg); }
+          25% { transform: translate3d(-3px, -5px, 0px) rotate(0.5deg); }
+          50% { transform: translate3d(5px, -2px, 0px) rotate(-0.5deg); }
+          75% { transform: translate3d(-2px, 3px, 0px) rotate(0.3deg); }
         }
         
         @keyframes float-offset {
-          0%, 100% { transform: translate(0px, 0px) rotate(0deg); }
-          33% { transform: translate(6px, -5px) rotate(-0.5deg); }
-          66% { transform: translate(-4px, 7px) rotate(1deg); }
+          0%, 100% { transform: translate3d(0px, 0px, 0px) rotate(0deg); }
+          33% { transform: translate3d(4px, -3px, 0px) rotate(-0.3deg); }
+          66% { transform: translate3d(-3px, 4px, 0px) rotate(0.5deg); }
         }
         
         @keyframes pulse-subtle {
-          0%, 100% { opacity: 0.6; transform: scale(1); }
-          50% { opacity: 0.8; transform: scale(1.05); }
+          0%, 100% { opacity: 0.6; transform: scale3d(1, 1, 1); }
+          50% { opacity: 0.8; transform: scale3d(1.02, 1.02, 1); }
         }
         
         @keyframes glow {
-          0%, 100% { opacity: 0.3; transform: scale(1); }
-          50% { opacity: 0.6; transform: scale(1.2); }
+          0%, 100% { opacity: 0.3; transform: scale3d(1, 1, 1); }
+          50% { opacity: 0.6; transform: scale3d(1.1, 1.1, 1); }
         }
         
         .animate-float-gentle {
-          animation: float-gentle 8s ease-in-out infinite;
+          animation: float-gentle 10s ease-in-out infinite;
+          will-change: transform;
         }
         
         .animate-float-offset {
-          animation: float-offset 6s ease-in-out infinite 1s;
+          animation: float-offset 8s ease-in-out infinite 1s;
+          will-change: transform;
         }
         
         .animate-pulse-subtle {
-          animation: pulse-subtle 4s ease-in-out infinite 0.5s;
+          animation: pulse-subtle 6s ease-in-out infinite 0.5s;
+          will-change: transform, opacity;
         }
         
         .animate-glow {
-          animation: glow 3s ease-in-out infinite;
+          animation: glow 4s ease-in-out infinite;
+          will-change: transform, opacity;
         }
       `}</style>
     </div>
