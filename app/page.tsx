@@ -339,7 +339,7 @@ export default function ConsultingLandingPage() {
                   <div className="text-purple-400 font-bold text-xl">✓</div>
                   <div>
                     <h3 className="font-semibold text-white mb-2">
-                      <strong>Exit-proven leadership</strong> - Led by executives from two 9-figure exits (Nordcloud to IBM, Worksuite)
+                      <span className="text-purple-300 font-bold">Exit-proven leadership</span> - Led by executives from two 9-figure exits (Nordcloud to IBM, Worksuite)
                     </h3>
                   </div>
                 </div>
@@ -348,7 +348,7 @@ export default function ConsultingLandingPage() {
                   <div className="text-purple-400 font-bold text-xl">✓</div>
                   <div>
                     <h3 className="font-semibold text-white mb-2">
-                      <strong>Scale expertise</strong> - Built and scaled engineering teams from 0 to 400+ employees
+                      <span className="text-purple-300 font-bold">Scale expertise</span> - Built and scaled engineering teams from 0 to 400+ employees
                     </h3>
                   </div>
                 </div>
@@ -357,7 +357,7 @@ export default function ConsultingLandingPage() {
                   <div className="text-purple-400 font-bold text-xl">✓</div>
                   <div>
                     <h3 className="font-semibold text-white mb-2">
-                      <strong>M&A ready</strong> - Active technical due diligence advisor for VC/PE funds
+                      <span className="text-purple-300 font-bold">M&A ready</span> - Active technical due diligence advisor for VC/PE funds
                     </h3>
                   </div>
                 </div>
@@ -366,7 +366,7 @@ export default function ConsultingLandingPage() {
                   <div className="text-purple-400 font-bold text-xl">✓</div>
                   <div>
                     <h3 className="font-semibold text-white mb-2">
-                      <strong>Full-stack excellence</strong> - From blockchain to AI to enterprise infrastructure
+                      <span className="text-purple-300 font-bold">Full-stack excellence</span> - From blockchain to AI to enterprise infrastructure
                     </h3>
                   </div>
                 </div>
@@ -375,7 +375,7 @@ export default function ConsultingLandingPage() {
                   <div className="text-purple-400 font-bold text-xl">✓</div>
                   <div>
                     <h3 className="font-semibold text-white mb-2">
-                      <strong>Builder's mindset</strong> - We've built SaaS businesses from scratch and know what works
+                      <span className="text-purple-300 font-bold">Builder's mindset</span> - We've built SaaS businesses from scratch and know what works
                     </h3>
                   </div>
                 </div>
