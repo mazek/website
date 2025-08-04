@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Brain, Code, Database, Shield } from "lucide-react"
+import { Brain, Code, Database, Shield, ChevronDown } from "lucide-react"
 
 interface FourPillarsProps {
   dict: any
@@ -67,7 +67,26 @@ export default function FourPillars({ dict }: FourPillarsProps) {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 items-stretch">
+        {/* Mobile Dropdown */}
+        <div className="md:hidden mb-8">
+          <div className="relative">
+            <select
+              value={activeService}
+              onChange={(e) => setActiveService(e.target.value)}
+              className="w-full p-4 bg-gray-900 border border-gray-700 rounded-lg text-white appearance-none cursor-pointer focus:border-purple-500 focus:outline-none"
+            >
+              {services.map((service) => (
+                <option key={service.key} value={service.key}>
+                  {service.title}
+                </option>
+              ))}
+            </select>
+            <ChevronDown className="absolute right-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 pointer-events-none" />
+          </div>
+        </div>
+
+        {/* Desktop Layout */}
+        <div className="hidden md:grid md:grid-cols-2 gap-8 items-stretch">
           {/* Left side - Service buttons */}
           <div className="flex flex-col justify-between aspect-square space-y-4">
             {services.map((service) => {
@@ -140,6 +159,44 @@ export default function FourPillars({ dict }: FourPillarsProps) {
               </div>
             )}
           </div>
+        </div>
+
+        {/* Mobile Content display */}
+        <div className="md:hidden bg-gray-900 border border-gray-700 rounded-lg p-6">
+          {activeServiceData && (
+            <div className="space-y-6">
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="flex h-16 w-16 items-center justify-center rounded-lg bg-purple-900/50">
+                  <activeServiceData.icon className="h-8 w-8 text-purple-400" />
+                </div>
+                <h3 className="text-2xl font-bold text-white">
+                  {activeServiceData.title}
+                </h3>
+              </div>
+
+              <p className="text-gray-300 leading-relaxed">
+                {activeServiceData.description}
+              </p>
+
+              <div>
+                <h4 className="font-semibold text-white mb-3">
+                  {activeServiceData.whatWeDeliver}
+                </h4>
+                <ul className="text-gray-300 space-y-2 text-sm">
+                  {activeServiceData.services.map((service: string, index: number) => (
+                    <li key={index} className="flex items-start">
+                      <span className="text-purple-400 mr-2">•</span>
+                      {service}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <p className="text-purple-300 text-sm font-medium bg-purple-900/20 p-3 rounded-lg border border-purple-900/50">
+                {activeServiceData.perfectFor}
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </section>
