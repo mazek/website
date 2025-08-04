@@ -4,21 +4,31 @@ const locales = ['en', 'pl']
 const defaultLocale = 'en'
 
 function getLocale(request: NextRequest): string {
-  // Check if locale is in URL
-  const pathname = request.nextUrl.pathname
-  const pathnameLocale = locales.find(
-    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
-  )
-  
-  if (pathnameLocale) return pathnameLocale
-
-  // Check Accept-Language header
+  // Check Accept-Language header for browser locale preference
   const acceptLanguage = request.headers.get('accept-language')
+  
   if (acceptLanguage) {
-    if (acceptLanguage.includes('pl')) return 'pl'
-    if (acceptLanguage.includes('en')) return 'en'
+    // Parse Accept-Language header to get preferred languages in order
+    const languages = acceptLanguage
+      .split(',')
+      .map(lang => {
+        const [code, quality = '1'] = lang.trim().split(';q=')
+        return {
+          code: code.toLowerCase().split('-')[0], // Get primary language code (e.g., 'pl' from 'pl-PL')
+          quality: parseFloat(quality)
+        }
+      })
+      .sort((a, b) => b.quality - a.quality) // Sort by quality preference
+    
+    // Find the first supported locale from browser preferences
+    for (const lang of languages) {
+      if (locales.includes(lang.code)) {
+        return lang.code
+      }
+    }
   }
 
+  // Default to English if no supported locale found in browser preferences
   return defaultLocale
 }
 

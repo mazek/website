@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import ClientButton from "@/components/ui/ClientButton"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import AnimatedBitropyDots from "@/components/ui/AnimatedBitropyDots"
-import { ArrowRight, Brain, Code, Database, Shield } from "lucide-react"
+import { Brain, Code, Database, Shield } from "lucide-react"
 import Image from "next/image"
 
 export default async function ConsultingLandingPage({
@@ -82,9 +82,6 @@ export default async function ConsultingLandingPage({
 
         <div className="w-full max-w-7xl mx-auto px-4 md:px-6 relative z-10">
           <div className="text-center space-y-8 max-w-4xl mx-auto">
-            <Badge variant="secondary" className="w-fit mx-auto bg-purple-900/50 text-purple-300 border-purple-700">
-              {dict.hero.badge}
-            </Badge>
 
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-white">
               {dict.hero.title_part1}
