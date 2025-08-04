@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "schedule_consultation": "Umów konsultację",
+    "schedule_consultation": "Umów rozmowę",
     "home": "Strona główna",
     "about": "O nas",
     "articles": "Artykuły",
@@ -8,19 +8,19 @@
     "privacy": "Prywatność",
     "services": "Usługi",
     "why_bitropy": "Dlaczego Bitropy",
-    "case_studies": "Studia przypadków"
+    "case_studies": "Case studies"
   },
   "header": {
     "services": "Usługi",
     "why_bitropy": "Dlaczego Bitropy",
-    "case_studies": "Studia przypadków",
+    "case_studies": "Case Studies",
     "articles": "Artykuły",
     "about": "O nas",
-    "schedule_consultation": "Umów konsultację",
+    "schedule_consultation": "Umów rozmowę",
     "services_dropdown": {
-      "technology_advisory": "Doradztwo technologiczne",
-      "ai_developer_productivity": "AI i produktywność programistów",
-      "enterprise_blockchain": "Blockchain korporacyjny",
+      "technology_advisory": "Doradztwo",
+      "ai_developer_productivity": "Sztuczna inteligencja (AI)",
+      "enterprise_blockchain": "Blockchain dla firm",
       "devsecops_aiops": "DevSecOps i AIOps"
     }
   },
@@ -28,14 +28,14 @@
     "badge": "Doradztwo i konsulting technologiczny",
     "title_part1": "Eksperckie doradztwo",
     "title_part2": "technologiczne",
-    "subtitle": "Doradztwo technologiczne wysokiej wartości • AI i produktywność programistów • Blockchain korporacyjny • DevSecOps i AIOps",
-    "cta_button": "Umów konsultację"
+    "subtitle": "Doradztwo technologiczne • Sztuszna inteligencja (AI) • Blockchain dla firm• DevSecOps i AIOps",
+    "cta_button": "Umów rozmowę"
   },
   "services": {
-    "section_title": "Nasze cztery filary",
+    "section_title": "Cztery filary doradztwa",
     "section_subtitle": "Strategiczna architektura technologiczna realizowana przez cztery wyspecjalizowane obszary usług",
     "advisory": {
-      "title": "Doradztwo technologiczne wysokiej wartości",
+      "title": "Doradztwo technologiczne",
       "description": "Prowadzimy przedsiębiorstwa do optymalnych decyzji technologicznych, które równoważą innowacje, bezpieczeństwo i szybkość wprowadzenia na rynek.",
       "what_we_deliver": "Co dostarczamy:",
       "services": [
@@ -58,10 +58,10 @@
       "perfect_for": "Idealne dla: Organizacji dążących do 10-krotnego zwiększenia prędkości rozwoju"
     },
     "blockchain": {
-      "title": "Blockchain korporacyjny",
+      "title": "Blockchain dla firm",
       "description": "Projektujemy bezpieczne rozwiązania blockchain dla rzeczywistej wartości biznesowej, nie dla szumu medialnego.",
       "services": [
-        "Architektura i audyty inteligentnych kontraktów",
+        "Architektura i audyty smart kontraktów",
         "Infrastruktura i protokoły DeFi",
         "Tokenizacja aktywów rzeczywistych (RWA)",
         "Zgodność i bezpieczeństwo Web3"
@@ -69,7 +69,7 @@
       "perfect_for": "Idealne dla: Firm eksplorujących blockchain dla praktycznego zastosowania"
     },
     "infrastructure": {
-      "title": "DevSecOps, AIOps i chmura",
+      "title": "DevSecOps, AIOps i cloud computing",
       "description": "Budujemy inteligentną, bezpieczną i zgodną z przepisami infrastrukturę, która skaluje się bez wysiłku.",
       "services": [
         "Transformacja i automatyzacja DevSecOps",
@@ -81,7 +81,7 @@
     }
   },
   "who_serve": {
-    "title": "Komu służymy",
+    "title": "Dla kogo",
     "saas_companies": {
       "title": "Firmy SaaS (od Seed do Series C)",
       "description": "Architektura dla wielodostępności, integracji funkcji AI, zgodności SOC 2 i gotowości do M&A"
@@ -159,8 +159,8 @@
       "description": "Pełniliśmy funkcję ułamkowego CTO dla innowacyjnego startupu AI, projektując skalowalną architekturę i nadzorując kompleksową realizację zaawansowanych rozwiązań programistycznych z integracjami dużych modeli językowych. Ustanowiliśmy solidne praktyki programistyczne i prowadziśmy zespół techniczny przez szybkie iteracje produktu."
     },
     "web3_strategy": {
-      "title": "Strategia Web3 i rozwój inteligentnych kontraktów",
-      "description": "Kierowaliśmy kompleksową strategią technologiczną dla firmy Web3 i z sukcesem zaimplementowaliśmy proof-of-concept inteligentnych kontraktów na blockchainie Ethereum. Dostarczyliśmy kompletny pipeline Web3 DevSecOps z automatyzowanymi systemami testowania, wdrażania i monitorowania dla aplikacji zdecentralizowanych."
+      "title": "Strategia Web3 i rozwój smart kontraktów",
+      "description": "Kierowaliśmy kompleksową strategią technologiczną dla firmy Web3 i z sukcesem zaimplementowaliśmy proof-of-concept smart kontraktów na blockchainie Ethereum. Dostarczyliśmy kompletny pipeline Web3 DevSecOps z automatyzowanymi systemami testowania, wdrażania i monitorowania dla aplikacji zdecentralizowanych."
     },
     "fashion_retail": {
       "title": "Strategia danych i AI dla handlu modą",
@@ -198,9 +198,9 @@
       ]
     },
     "enterprise_blockchain": {
-      "title": "Blockchain korporacyjny",
+      "title": "Blockchain dla firm",
       "services": [
-        "Inteligentne kontrakty",
+        "Smart kontrakty",
         "Rozwiązania DeFi",
         "Tokenizacja"
       ]
@@ -217,17 +217,17 @@
       "title": "Kontakt",
       "links": [
         "LinkedIn",
-        "Studia przypadków",
-        "Umów konsultację"
+        "Case Studies",
+        "Umów rozmowę"
       ]
     },
     "copyright": "© {year} bitropy.io. Wszelkie prawa zastrzeżone.",
-    "made_with_love": "Stworzone w Europie 🇪🇺 z miłością ❤️",
+    "made_with_love": "Made in Europe 🇪🇺 with love ❤️",
     "privacy_policy": "Polityka prywatności"
   },
   "about": {
     "title": "O Bitropy",
-    "subtitle": "Nasza misja, wartości i wizjoner stojący za naszą historią sukcesu.",
+    "subtitle": "Nasza misja, wartości i wizja stojąca za naszą historią.",
     "back_to_home": "Powrót do strony głównej",
     "why_created": {
       "title": "Dlaczego powstała Bitropy",
