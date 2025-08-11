@@ -1,30 +1,32 @@
 import Footer from "@/components/layout/Footer"
 import Header from "@/components/layout/Header"
+import Breadcrumb, { BreadcrumbStructuredData } from "@/components/ui/Breadcrumb"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { getDictionary } from "@/lib/dictionaries"
 import { getAllArticles } from "@/lib/mdx"
 import { ArrowRight, Calendar, Clock } from "lucide-react"
+import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Articles & Insights",
-  description: "Strategic insights on AI, DevSecOps, Enterprise Blockchain, and technology leadership from executives with 9-figure exit experience. Expert analysis for ambitious companies.",
+  title: "AI Consulting & Data Sovereignty Insights - Expert Articles",
+  description: "Expert insights on Private AI implementation, data sovereignty frameworks, and enterprise AI security. Strategic guidance from executives with proven 9-figure exits. Learn how to implement AI governance, ensure regulatory compliance, and build secure AI infrastructure for your organization.",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://bitropy.io/articles",
     siteName: "Bitropy",
-    title: "Articles & Insights | Bitropy",
-    description: "Strategic insights on AI, DevSecOps, Enterprise Blockchain, and technology leadership from executives with 9-figure exit experience. Expert analysis for ambitious companies.",
+    title: "AI Consulting & Data Sovereignty Insights - Expert Articles | Bitropy",
+    description: "Expert insights on Private AI implementation, data sovereignty frameworks, and enterprise AI security. Strategic guidance from executives with proven 9-figure exits. Learn how to implement AI governance, ensure regulatory compliance, and build secure AI infrastructure for your organization.",
     images: [
       {
         url: "https://bitropy.io/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Bitropy Articles & Insights",
+        alt: "Bitropy AI & Data Sovereignty Articles",
       },
     ],
   },
@@ -32,8 +34,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@bitropy",
     creator: "@bitropy",
-    title: "Articles & Insights | Bitropy",
-    description: "Strategic insights on AI, DevSecOps, Enterprise Blockchain, and technology leadership from executives with 9-figure exit experience.",
+    title: "AI Consulting & Data Sovereignty Insights - Expert Articles | Bitropy",
+    description: "Expert insights on Private AI implementation, data sovereignty frameworks, and enterprise AI security. Strategic guidance from executives with proven 9-figure exits.",
     images: ["https://bitropy.io/og-image.png"],
   },
   alternates: {
@@ -41,12 +43,25 @@ export const metadata: Metadata = {
   },
 }
 
-export default function ArticlesPage() {
+export default async function ArticlesPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>
+}) {
+  const { lang } = await params
+  const dict = await getDictionary(lang as 'en' | 'pl')
   const articles = getAllArticles()
+
+  const breadcrumbItems = [
+    {
+      label: dict.navigation?.articles || 'Articles'
+    }
+  ]
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
-      <Header currentPage="articles" />
+      <BreadcrumbStructuredData items={breadcrumbItems} lang={lang} />
+      <Header currentPage="articles" dict={dict} />
 
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 overflow-hidden">
@@ -65,35 +80,39 @@ export default function ArticlesPage() {
         </div>
 
         <div className="w-full max-w-7xl mx-auto px-4 md:px-6 relative z-10">
+          <div className="mb-8">
+            <Breadcrumb items={breadcrumbItems} lang={lang} />
+          </div>
           <div className="text-center space-y-8 max-w-4xl mx-auto">
             <Badge variant="secondary" className="w-fit mx-auto bg-purple-900/50 text-purple-300 border-purple-700">
-              📚 Strategic Technology Insights
+              🤖 AI & Data Sovereignty Insights
             </Badge>
 
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-white">
-              Strategic Technology
+              Private AI &
               <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
                 {" "}
-                Articles & Insights
+                Data Sovereignty
               </span>
+              {" "}Articles
             </h1>
 
             <p className="text-xl text-gray-300 max-w-[800px] mx-auto leading-relaxed">
-              Strategic insights on AI, DevSecOps, Enterprise Blockchain, and technology leadership from executives with 9-figure exit experience. Expert analysis for ambitious companies.
+              Strategic insights on Private AI implementation, Data Sovereignty solutions, and AI security from executives with 9-figure exit experience. Expert analysis for enterprise AI adoption.
             </p>
 
             <div className="flex items-center justify-center space-x-8 text-sm text-gray-400">
               <div className="flex items-center space-x-2">
                 <Calendar className="h-4 w-4 text-purple-400" />
-                <span>Regular Updates</span>
+                <span>Regular AI Insights</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Clock className="h-4 w-4 text-purple-400" />
-                <span>Exit-Proven Insights</span>
+                <span>Data Sovereignty Focus</span>
               </div>
               <div className="flex items-center space-x-2">
                 <ArrowRight className="h-4 w-4 text-purple-400" />
-                <span>Actionable Content</span>
+                <span>Enterprise Ready</span>
               </div>
             </div>
           </div>
@@ -119,15 +138,15 @@ export default function ArticlesPage() {
                     {article.category}
                   </Badge>
                 </div>
-                
+
                 <CardHeader className="pb-4">
                   <div className="flex items-center space-x-4 text-sm text-gray-400 mb-2">
                     <div className="flex items-center space-x-1">
                       <Calendar className="h-3 w-3" />
-                      <span>{new Date(article.publishDate).toLocaleDateString('en-US', { 
-                        year: 'numeric', 
-                        month: 'short', 
-                        day: 'numeric' 
+                      <span>{new Date(article.publishDate).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'short',
+                        day: 'numeric'
                       })}</span>
                     </div>
                     <div className="flex items-center space-x-1">
@@ -139,14 +158,14 @@ export default function ArticlesPage() {
                     {article.title}
                   </CardTitle>
                 </CardHeader>
-                
+
                 <CardContent className="pt-0">
                   <CardDescription className="text-gray-300 line-clamp-3 mb-4">
                     {article.excerpt}
                   </CardDescription>
-                  <Link href={`/articles/${article.id}`}>
-                    <Button 
-                      variant="ghost" 
+                  <Link href={`/${lang}/articles/${article.id}`}>
+                    <Button
+                      variant="ghost"
                       className="text-purple-400 hover:text-purple-300 hover:bg-purple-900/20 p-0 h-auto"
                     >
                       Read More
@@ -184,7 +203,7 @@ export default function ArticlesPage() {
         </div>
       </section>
 
-      <Footer />
+      <Footer dict={dict} />
     </div>
   )
 } 

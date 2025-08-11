@@ -6,7 +6,39 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 
 interface FooterProps {
-  dict?: any
+  dict?: {
+    footer?: {
+      tagline: string
+      company_info: {
+        name: string
+        address_line1: string
+        address_line2: string
+      }
+      technology_advisory: {
+        title: string
+        services: string[]
+      }
+      ai_solutions: {
+        title: string
+        services: string[]
+      }
+      data_sovereignty: {
+        title: string
+        services: string[]
+      }
+      ai_apps: {
+        title: string
+        services: string[]
+      }
+      connect: {
+        title: string
+        links: string[]
+      }
+      copyright: string
+      made_with_love: string
+      privacy_policy: string
+    }
+  }
 }
 
 export default function Footer({ dict }: FooterProps) {
@@ -29,13 +61,13 @@ export default function Footer({ dict }: FooterProps) {
       title: "AI Solutions", 
       services: ["AI Strategy", "Developer Tools", "AI Training"]
     },
-    enterprise_blockchain: {
-      title: "Enterprise Blockchain",
-      services: ["Smart Contracts", "DeFi Solutions", "Tokenization"]
+    data_sovereignty: {
+      title: "Data Sovereignty",
+      services: ["Data Residency", "Sovereign Cloud", "Compliance Audits"]
     },
-    infrastructure: {
-      title: "Infrastructure",
-      services: ["DevSecOps", "AIOps", "Cloud & FinOps"]
+    ai_apps: {
+      title: "AI Applications",
+      services: ["Custom AI Apps", "Process Automation", "AI Agents"]
     },
     connect: {
       title: "Connect",
@@ -92,9 +124,9 @@ export default function Footer({ dict }: FooterProps) {
           </div>
 
           <div className="space-y-4">
-            <h3 className="font-semibold text-white">{footerData.enterprise_blockchain.title}</h3>
+            <h3 className="font-semibold text-white">{footerData.data_sovereignty.title}</h3>
             <ul className="space-y-2 text-gray-300">
-              {footerData.enterprise_blockchain.services.map((service: string, index: number) => (
+              {footerData.data_sovereignty.services.map((service: string, index: number) => (
                 <li key={index}>
                   <Link href={`/${currentLang}/#services`} className="hover:text-white transition-colors">
                     {service}
@@ -105,9 +137,9 @@ export default function Footer({ dict }: FooterProps) {
           </div>
 
           <div className="space-y-4">
-            <h3 className="font-semibold text-white">{footerData.infrastructure.title}</h3>
+            <h3 className="font-semibold text-white">{footerData.ai_apps.title}</h3>
             <ul className="space-y-2 text-gray-300">
-              {footerData.infrastructure.services.map((service: string, index: number) => (
+              {footerData.ai_apps.services.map((service: string, index: number) => (
                 <li key={index}>
                   <Link href={`/${currentLang}/#services`} className="hover:text-white transition-colors">
                     {service}

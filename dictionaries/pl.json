@@ -18,66 +18,65 @@
     "about": "O nas",
     "schedule_consultation": "Umów rozmowę",
     "services_dropdown": {
-      "technology_advisory": "Doradztwo",
-      "ai_developer_productivity": "Sztuczna inteligencja (AI)",
-      "enterprise_blockchain": "Blockchain dla firm",
-      "devsecops_aiops": "DevSecOps i AIOps"
+      "ai_strategy": "Strategia i zarządzanie AI",
+      "private_ai": "Implementacja prywatnej AI",
+      "data_sovereignty": "Rozwiązania suwerenności danych",
+      "ai_apps": "Aplikacje AI i automatyzacja"
     }
   },
   "hero": {
-    "badge": "Doradztwo i konsulting technologiczny",
-    "title_part1": "Eksperckie doradztwo",
-    "title_part2": "technologiczne",
-    "subtitle": "Doradztwo technologiczne • Sztuszna inteligencja (AI) • Blockchain dla firm• DevSecOps i AIOps",
-    "cta_button": "Umów rozmowę"
+    "title_part1": "Szybka ścieżka AI",
+    "title_part2": "dla Twojej firmy",
+    "subtitle": "Omiń krzywą uczenia AI. Wdrażamy rozwiązania AI klasy korporacyjnej, które przynoszą rezultaty w tygodniach, nie latach. Prywatne, bezpieczne i gotowe do skalowania.",
+    "cta_button": "Rozpocznij swoją podróż z AI"
   },
   "services": {
-    "section_title": "Cztery filary doradztwa",
-    "section_subtitle": "Strategiczna architektura technologiczna realizowana przez cztery wyspecjalizowane obszary usług",
+    "section_title": "Nasze główne usługi",
+    "section_subtitle": "Rozwiązania prywatnej AI i suwerenności danych realizowane przez wyspecjalizowane obszary usług",
     "advisory": {
-      "title": "Doradztwo technologiczne",
-      "description": "Prowadzimy przedsiębiorstwa do optymalnych decyzji technologicznych, które równoważą innowacje, bezpieczeństwo i szybkość wprowadzenia na rynek.",
+      "title": "Strategia i zarządzanie AI",
+      "description": "Prowadzimy przedsiębiorstwa do odpowiedzialnego wdrażania AI z kompleksowymi strukturami zarządzania zapewniającymi suwerenność danych i zgodność z przepisami.",
       "what_we_deliver": "Co dostarczamy:",
       "services": [
-        "Przywództwo ułamkowego CTO/CISO",
-        "Strategia technologiczna i mapy drogowe architektury",
-        "Techniczna due diligence M&A",
-        "Doradztwo technologiczne na poziomie zarządu"
+        "Strategie i struktury zarządzania AI",
+        "Mapy drogowe wdrażania suwerenności danych",
+        "Ocena zgodności i ryzyka AI",
+        "Doradztwo i szkolenia dla kadry zarządzającej w obszarze AI"
       ],
-      "perfect_for": "Idealne dla: Firm stojących przed krytycznymi decyzjami technologicznymi lub przygotowujących się do skalowania"
+      "perfect_for": "Idealne dla: Organizacji wdrażających AI przy zachowaniu kontroli nad danymi i zgodnością z przepisami"
     },
     "ai_productivity": {
-      "title": "AI i produktywność programistów",
-      "description": "Transformujemy zespoły inżynierskie za pomocą przepływów pracy wspomaganych przez AI i kompleksowych programów rozwoju kompetencji.",
+      "title": "Implementacja prywatnej AI",
+      "description": "Wdrażamy bezpieczne, prywatne systemy AI, które utrzymują Twoje dane na miejscu, zapewniając jednocześnie możliwości AI na poziomie korporacyjnym.",
       "services": [
-        "Środowiska programistyczne wspomagane przez AI",
-        "Automatyzacja produktywności programistów",
-        "Struktury zarządzania AI",
-        "Spersonalizowane programy szkoleniowe i rozwoju kompetencji"
+        "Konfiguracja infrastruktury AI na miejscu",
+        "Wdrażanie i dostrajanie prywatnych LLM",
+        "Bezpieczne rurociągi danych AI",
+        "Środowiska programistyczne AI odizolowane od internetu"
       ],
-      "perfect_for": "Idealne dla: Organizacji dążących do 10-krotnego zwiększenia prędkości rozwoju"
+      "perfect_for": "Idealne dla: Organizacji wymagających możliwości AI bez opuszczania danych z ich infrastruktury"
     },
-    "blockchain": {
-      "title": "Blockchain dla firm",
-      "description": "Projektujemy bezpieczne rozwiązania blockchain dla rzeczywistej wartości biznesowej, nie dla szumu medialnego.",
+    "data_sovereignty": {
+      "title": "Rozwiązania suwerenności danych",
+      "description": "Projektujemy kompleksowe struktury suwerenności danych zapewniające, że Twoje dane pozostają pod Twoją pełną kontrolą i jurysdykcją.",
       "services": [
-        "Architektura i audyty smart kontraktów",
-        "Infrastruktura i protokoły DeFi",
-        "Tokenizacja aktywów rzeczywistych (RWA)",
-        "Zgodność i bezpieczeństwo Web3"
+        "Strategie rezydencji i lokalizacji danych",
+        "Struktury zarządzania danymi transgranicznymi",
+        "Projektowanie architektur suwerennych chmur",
+        "Audyty zgodności suwerenności danych"
       ],
-      "perfect_for": "Idealne dla: Firm eksplorujących blockchain dla praktycznego zastosowania"
+      "perfect_for": "Idealne dla: Organizacji z regulowanych branż wymagających pełnej kontroli nad danymi"
     },
     "infrastructure": {
-      "title": "DevSecOps, AIOps i cloud computing",
-      "description": "Budujemy inteligentną, bezpieczną i zgodną z przepisami infrastrukturę, która skaluje się bez wysiłku.",
+      "title": "Aplikacje AI i automatyzacja",
+      "description": "Tworzymy niestandardowe aplikacje AI i inteligentne systemy automatyzacji, które zwiększają produktywność przy jednoczesnym zachowaniu pełnej kontroli i prywatności danych.",
       "services": [
-        "Transformacja i automatyzacja DevSecOps",
-        "Implementacja AIOps dla inteligentnych operacji",
-        "Architektura chmury i optymalizacja FinOps",
-        "Implementacja SOC 2 i ISO 27001"
+        "Rozwój niestandardowych aplikacji AI",
+        "Inteligentna automatyzacja procesów",
+        "Optymalizacja przepływów pracy z AI",
+        "Wdrażanie prywatnych agentów AI"
       ],
-      "perfect_for": "Idealne dla: Firm potrzebujących solidnej infrastruktury z operacjami napędzanymi przez AI"
+      "perfect_for": "Idealne dla: Organizacji chcących budować aplikacje AI i automatyzować procesy prywatnie"
     }
   },
   "who_serve": {
@@ -100,11 +99,11 @@
     "points": [
       {
         "highlight": "Przywództwo potwierdzone exitami",
-        "description": "Prowadzone przez kadry zarządzające z dwóch exitów o wartości dziewięciu cyfr (Nordcloud do IBM, Worksuite)"
+        "description": "Prowadzone przez kadry zarządzające z dwóch exitów o wartości dziewięciu cyfr (Nordcloud do IBM, Worksuite) oraz przywództwa wiodących europejskich platform e-commerce"
       },
       {
         "highlight": "Doświadczenie w skalowaniu",
-        "description": "Zbudowaliśmy i przeskalowaliśmy zespoły inżynierskie od 0 do 400+ pracowników"
+        "description": "Zbudowaliśmy i przeskalowaliśmy zespoły inżynierskie od 0 do 1000+ pracowników"
       },
       {
         "highlight": "Gotowość do M&A",
@@ -158,9 +157,9 @@
       "title": "Przywództwo techniczne startupu AI",
       "description": "Pełniliśmy funkcję ułamkowego CTO dla innowacyjnego startupu AI, projektując skalowalną architekturę i nadzorując kompleksową realizację zaawansowanych rozwiązań programistycznych z integracjami dużych modeli językowych. Ustanowiliśmy solidne praktyki programistyczne i prowadziśmy zespół techniczny przez szybkie iteracje produktu."
     },
-    "web3_strategy": {
-      "title": "Strategia Web3 i rozwój smart kontraktów",
-      "description": "Kierowaliśmy kompleksową strategią technologiczną dla firmy Web3 i z sukcesem zaimplementowaliśmy proof-of-concept smart kontraktów na blockchainie Ethereum. Dostarczyliśmy kompletny pipeline Web3 DevSecOps z automatyzowanymi systemami testowania, wdrażania i monitorowania dla aplikacji zdecentralizowanych."
+    "private_ai_implementation": {
+      "title": "Implementacja infrastruktury prywatnej AI",
+      "description": "Zaprojektowaliśmy i wdrożyliśmy kompletną infrastrukturę prywatnej AI dla firmy usług finansowych, zapewniając, że dane nigdy nie opuszczają ich siedziby. Wdrożyliśmy prywatne LLM z możliwościami niestandardowego dostrajania, osiągając funkcjonalność AI na poziomie korporacyjnym przy zachowaniu pełnej suwerenności danych i zgodności z przepisami."
     },
     "fashion_retail": {
       "title": "Strategia danych i AI dla handlu modą",
@@ -197,20 +196,20 @@
         "Szkolenia AI"
       ]
     },
-    "enterprise_blockchain": {
-      "title": "Blockchain dla firm",
+    "data_sovereignty": {
+      "title": "Suwerenność danych",
       "services": [
-        "Smart kontrakty",
-        "Rozwiązania DeFi",
-        "Tokenizacja"
+        "Rezydencja danych",
+        "Suwerenna chmura",
+        "Audyty zgodności"
       ]
     },
-    "infrastructure": {
-      "title": "Infrastruktura",
+    "ai_apps": {
+      "title": "Aplikacje AI",
       "services": [
-        "DevSecOps",
-        "AIOps",
-        "Chmura i FinOps"
+        "Niestandardowe aplikacje AI",
+        "Automatyzacja procesów",
+        "Agenty AI"
       ]
     },
     "connect": {
