@@ -18,66 +18,65 @@
     "about": "About",
     "schedule_consultation": "Schedule Consultation",
     "services_dropdown": {
-      "technology_advisory": "Technology Advisory",
-      "ai_developer_productivity": "AI & Developer Productivity",
-      "enterprise_blockchain": "Enterprise Blockchain",
-      "devsecops_aiops": "DevSecOps & AIOps"
+      "ai_strategy": "AI Strategy & Governance",
+      "private_ai": "Private AI Implementation", 
+      "data_sovereignty": "Data Sovereignty Solutions",
+      "ai_apps": "AI Applications & Automation"
     }
   },
   "hero": {
-    "badge": "Technology Consulting & Advisory",
-    "title_part1": "Expert Technology",
-    "title_part2": "Consulting",
-    "subtitle": "High-Value Technology Advisory • AI & Developer Productivity • Enterprise Blockchain • DevSecOps & AIOps",
-    "cta_button": "Schedule Consultation"
+    "title_part1": "AI Fast Track",
+    "title_part2": "for Your Company",
+    "subtitle": "Skip the AI learning curve. We implement enterprise-grade AI solutions that deliver results in weeks, not years. Private, secure, and built for scale.",
+    "cta_button": "Start Your AI Journey"
   },
   "services": {
-    "section_title": "Our Four Pillars",
-    "section_subtitle": "Strategic technology architecture delivered through four specialized service areas",
+    "section_title": "Our Core Services",
+    "section_subtitle": "Private AI and data sovereignty solutions delivered through specialized service areas",
     "advisory": {
-      "title": "High-Value Technology Advisory",
-      "description": "We guide enterprises to optimal technology decisions that balance innovation, security, and speed to market.",
+      "title": "AI Strategy & Governance",
+      "description": "We guide enterprises to implement AI responsibly with comprehensive governance frameworks that ensure data sovereignty and regulatory compliance.",
       "what_we_deliver": "What we deliver:",
       "services": [
-        "Fractional CTO/CISO leadership",
-        "Technology strategy and architecture roadmaps",
-        "M&A technical due diligence",
-        "Board-level technology advisory"
+        "AI strategy and governance frameworks",
+        "Data sovereignty implementation roadmaps",
+        "AI compliance and risk assessment",
+        "Executive AI advisory and training"
       ],
-      "perfect_for": "Perfect for: Companies facing critical technology decisions or preparing for scale"
+      "perfect_for": "Perfect for: Organizations implementing AI while maintaining data control and compliance"
     },
     "ai_productivity": {
-      "title": "AI & Developer Productivity",
-      "description": "We transform engineering teams with AI-powered workflows and comprehensive enablement programs.",
+      "title": "Private AI Implementation",
+      "description": "We implement secure, private AI systems that keep your data on-premises while delivering enterprise-grade AI capabilities.",
       "services": [
-        "AI-augmented development environments",
-        "Developer productivity automation",
-        "AI governance frameworks",
-        "Custom training and enablement programs"
+        "On-premises AI infrastructure setup",
+        "Private LLM deployment and fine-tuning",
+        "Secure AI data pipelines",
+        "Air-gapped AI development environments"
       ],
-      "perfect_for": "Perfect for: Organizations looking to 10x their development velocity"
+      "perfect_for": "Perfect for: Organizations requiring AI capabilities without data leaving their infrastructure"
     },
-    "blockchain": {
-      "title": "Enterprise Blockchain",
-      "description": "We architect secure blockchain solutions for real business value, not hype.",
+    "data_sovereignty": {
+      "title": "Data Sovereignty Solutions",
+      "description": "We architect comprehensive data sovereignty frameworks that ensure your data remains under your complete control and jurisdiction.",
       "services": [
-        "Smart contract architecture and audits",
-        "DeFi infrastructure and protocols",
-        "Real World Asset (RWA) tokenization",
-        "Web3 compliance and security"
+        "Data residency and localization strategies",
+        "Cross-border data governance frameworks",
+        "Sovereign cloud architecture design",
+        "Data sovereignty compliance audits"
       ],
-      "perfect_for": "Perfect for: Companies exploring blockchain for actual utility"
+      "perfect_for": "Perfect for: Organizations in regulated industries requiring complete data control"
     },
     "infrastructure": {
-      "title": "DevSecOps, AIOps & Cloud",
-      "description": "We build intelligent, secure, and compliant infrastructure that scales effortlessly.",
+      "title": "AI Applications & Automation",
+      "description": "We develop custom AI applications and intelligent automation systems that enhance productivity while maintaining complete data control and privacy.",
       "services": [
-        "DevSecOps transformation and automation",
-        "AIOps implementation for intelligent operations",
-        "Cloud architecture and FinOps optimization",
-        "SOC 2 and ISO 27001 implementation"
+        "Custom AI application development",
+        "Intelligent process automation",
+        "AI-powered workflow optimization",
+        "Private AI agent deployment"
       ],
-      "perfect_for": "Perfect for: Companies needing rock-solid infrastructure with AI-driven operations"
+      "perfect_for": "Perfect for: Organizations wanting to build AI-powered applications and automate processes privately"
     }
   },
   "who_serve": {
@@ -88,7 +87,7 @@
     },
     "enterprise_teams": {
       "title": "Enterprise Technology Teams",
-      "description": "Modernization initiatives, AI adoption, blockchain pilots, and DevSecOps transformation"
+      "description": "AI adoption initiatives, intelligent automation, and custom AI application development"
     },
     "startups": {
       "title": "High-Growth Startups",
@@ -100,11 +99,11 @@
     "points": [
       {
         "highlight": "Exit-proven leadership",
-        "description": "Led by executives from two 9-figure exits (Nordcloud to IBM, Worksuite)"
+        "description": "Led by executives from two 9-figure exits (Nordcloud to IBM, Worksuite) and leadership of leading European e-commerce platforms"
       },
       {
         "highlight": "Scale expertise",
-        "description": "Built and scaled engineering teams from 0 to 400+ employees"
+        "description": "Built and scaled engineering teams from 0 to 1000+ employees"
       },
       {
         "highlight": "M&A ready",
@@ -158,9 +157,9 @@
       "title": "AI Startup Technical Leadership",
       "description": "Served as Fractional CTO for an innovative AI startup, designing scalable architecture and overseeing end-to-end technical delivery of advanced software solutions with Large Language Model integrations. Established robust development practices and guided the technical team through rapid product iterations."
     },
-    "web3_strategy": {
-      "title": "Web3 Strategy & Smart Contract Development",
-      "description": "Led comprehensive technological strategy for a Web3 company and successfully implemented proof-of-concept smart contracts on Ethereum blockchain. Delivered complete Web3 DevSecOps pipeline with automated testing, deployment, and monitoring systems for decentralized applications."
+    "private_ai_implementation": {
+      "title": "Private AI Infrastructure Implementation",
+      "description": "Designed and implemented a complete private AI infrastructure for a financial services company, ensuring data never left their premises. Deployed private LLMs with custom fine-tuning capabilities, achieving enterprise-grade AI functionality while maintaining full data sovereignty and regulatory compliance."
     },
     "fashion_retail": {
       "title": "Fashion Retail Data & AI Strategy",
@@ -197,20 +196,20 @@
         "AI Training"
       ]
     },
-    "enterprise_blockchain": {
-      "title": "Enterprise Blockchain",
+    "data_sovereignty": {
+      "title": "Data Sovereignty",
       "services": [
-        "Smart Contracts",
-        "DeFi Solutions",
-        "Tokenization"
+        "Data Residency",
+        "Sovereign Cloud",
+        "Compliance Audits"
       ]
     },
-    "infrastructure": {
-      "title": "Infrastructure",
+    "ai_apps": {
+      "title": "AI Applications",
       "services": [
-        "DevSecOps",
-        "AIOps",
-        "Cloud & FinOps"
+        "Custom AI Apps",
+        "Process Automation",
+        "AI Agents"
       ]
     },
     "connect": {

@@ -30,13 +30,13 @@ export default function FourPillars({ dict }: FourPillarsProps) {
       perfectFor: dict.services.ai_productivity.perfect_for
     },
     {
-      key: 'blockchain',
+      key: 'data_sovereignty',
       icon: Code,
-      title: dict.services.blockchain.title,
-      description: dict.services.blockchain.description,
+      title: dict.services.data_sovereignty.title,
+      description: dict.services.data_sovereignty.description,
       whatWeDeliver: dict.services.advisory.what_we_deliver,
-      services: dict.services.blockchain.services,
-      perfectFor: dict.services.blockchain.perfect_for
+      services: dict.services.data_sovereignty.services,
+      perfectFor: dict.services.data_sovereignty.perfect_for
     },
     {
       key: 'infrastructure',

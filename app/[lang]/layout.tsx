@@ -1,4 +1,5 @@
 import GoogleAnalytics from "@/components/GoogleAnalytics"
+import { OrganizationSchema, ServiceSchema } from "@/components/StructuredData"
 import { getDictionary } from "@/lib/dictionaries"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
@@ -94,9 +95,12 @@ export default async function LocaleLayout({
     <html lang={lang}>
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="alternate" type="application/rss+xml" title="Bitropy - AI & Technology Insights" href="/feed.xml" />
       </head>
       <body className={inter.className}>
         <GoogleAnalytics />
+        <OrganizationSchema />
+        <ServiceSchema />
         {children}
       </body>
     </html>

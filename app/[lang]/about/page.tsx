@@ -6,6 +6,35 @@ import Link from "next/link"
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
 import { getDictionary } from "@/lib/dictionaries"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "About Bitropy - Exit-Proven AI & Technology Leadership",
+  description: "Learn about Bitropy's leadership team with proven track records from 9-figure exits (Nordcloud to IBM, Worksuite) and European e-commerce platforms. Expert AI consulting, data sovereignty, and fractional CTO services for enterprise technology transformation.",
+  openGraph: {
+    type: "website",
+    title: "About Bitropy - Exit-Proven AI & Technology Leadership",
+    description: "Leadership team with proven track records from 9-figure exits and European e-commerce platforms. Expert AI consulting and fractional CTO services.",
+    url: "https://bitropy.io/about",
+    images: [
+      {
+        url: "https://bitropy.io/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Bitropy Leadership Team",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Bitropy - Exit-Proven AI & Technology Leadership",
+    description: "Leadership team with proven track records from 9-figure exits and European e-commerce platforms. Expert AI consulting and fractional CTO services.",
+    images: ["https://bitropy.io/og-image.png"],
+  },
+  alternates: {
+    canonical: "https://bitropy.io/about",
+  },
+}
 
 export default async function AboutPage({
   params,

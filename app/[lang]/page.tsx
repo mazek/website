@@ -300,11 +300,11 @@ export default async function ConsultingLandingPage({
                   <Code className="h-6 w-6 text-white" />
                 </div>
                 <div className="flex flex-wrap gap-2 mb-3">
-                  <Badge className="bg-purple-900/50 text-purple-300 border-purple-700">Enterprise Blockchain</Badge>
+                  <Badge className="bg-purple-900/50 text-purple-300 border-purple-700">Private AI Infrastructure</Badge>
                 </div>
-                <h3 className="font-semibold text-white mb-2">{dict.case_studies.web3_strategy.title}</h3>
+                <h3 className="font-semibold text-white mb-2">{dict.case_studies.private_ai_implementation.title}</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  {dict.case_studies.web3_strategy.description}
+                  {dict.case_studies.private_ai_implementation.description}
                 </p>
               </CardContent>
             </Card>
@@ -315,7 +315,7 @@ export default async function ConsultingLandingPage({
                   <Database className="h-6 w-6 text-white" />
                 </div>
                 <div className="flex flex-wrap gap-2 mb-3">
-                  <Badge className="bg-purple-900/50 text-purple-300 border-purple-700">AI & Developer Productivity</Badge>
+                  <Badge className="bg-purple-900/50 text-purple-300 border-purple-700">Data Sovereignty & AI</Badge>
                 </div>
                 <h3 className="font-semibold text-white mb-2">{dict.case_studies.fashion_retail.title}</h3>
                 <p className="text-gray-300 leading-relaxed">

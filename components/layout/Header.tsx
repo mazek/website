@@ -5,12 +5,13 @@ import { Button } from "@/components/ui/button"
 import { Drawer, DrawerClose, DrawerContent, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer"
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher"
 import { useIsMobile } from "@/components/ui/use-mobile"
-import { Menu } from "lucide-react"
+import { Menu, ChevronDown } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { useState, useRef, useEffect } from "react"
 
 interface HeaderProps {
-  currentPage?: "home" | "about" | "privacy" | "articles"
+  currentPage?: "home" | "about" | "privacy" | "articles" | "contact"
   dict?: any
 }
 
@@ -18,6 +19,20 @@ export default function Header({ currentPage = "home", dict }: HeaderProps) {
   const isMobile = useIsMobile()
   const pathname = usePathname()
   const currentLang = pathname.split('/')[1] || 'en'
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsDropdownOpen(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
   
   // Default English values as fallback
   const headerData = dict?.header || {
@@ -28,10 +43,10 @@ export default function Header({ currentPage = "home", dict }: HeaderProps) {
     about: "About",
     schedule_consultation: "Schedule Consultation",
     services_dropdown: {
-      technology_advisory: "Technology Advisory",
-      ai_developer_productivity: "AI & Developer Productivity", 
-      enterprise_blockchain: "Enterprise Blockchain",
-      devsecops_aiops: "DevSecOps & AIOps"
+      ai_strategy: "AI Strategy & Governance",
+      private_ai: "Private AI Implementation",
+      data_sovereignty: "Data Sovereignty Solutions",
+      ai_apps: "AI Applications & Automation"
     }
   }
   return (
@@ -42,22 +57,60 @@ export default function Header({ currentPage = "home", dict }: HeaderProps) {
         </Link>
 
         <nav className="hidden md:flex items-center space-x-8">
-          <div className="relative group">
-            <Link
-              href={`/${currentLang}/#services`}
-              className={`text-base font-medium transition-colors ${currentPage === "home" ? "text-gray-300 hover:text-white" : "text-gray-300 hover:text-white"
+          <div className="relative" ref={dropdownRef}>
+            <button
+              type="button"
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              onMouseEnter={() => setIsDropdownOpen(true)}
+              className={`flex items-center text-base font-medium transition-colors ${currentPage === "home" ? "text-gray-300 hover:text-white" : "text-gray-300 hover:text-white"
                 }`}
+              aria-expanded={isDropdownOpen}
+              aria-haspopup="true"
             >
               {headerData.services}
-            </Link>
-            <div className="absolute top-full left-0 mt-2 w-64 bg-gray-900 border border-gray-700 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <div className="p-4 space-y-2">
-                <Link href={`/${currentLang}/#services`} className="block text-sm text-gray-300 hover:text-white transition-colors">{headerData.services_dropdown.technology_advisory}</Link>
-                <Link href={`/${currentLang}/#services`} className="block text-sm text-gray-300 hover:text-white transition-colors">{headerData.services_dropdown.ai_developer_productivity}</Link>
-                <Link href={`/${currentLang}/#services`} className="block text-sm text-gray-300 hover:text-white transition-colors">{headerData.services_dropdown.enterprise_blockchain}</Link>
-                <Link href={`/${currentLang}/#services`} className="block text-sm text-gray-300 hover:text-white transition-colors">{headerData.services_dropdown.devsecops_aiops}</Link>
+              <ChevronDown
+                className={`ml-1 h-4 w-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`}
+              />
+            </button>
+            {isDropdownOpen && (
+              <div 
+                className="absolute top-full left-0 pt-2 z-50"
+                onMouseLeave={() => setIsDropdownOpen(false)}
+              >
+                <div className="w-64 bg-gray-900 border border-gray-700 rounded-lg shadow-xl">
+                  <div className="p-4 space-y-2">
+                    <Link 
+                      href={`/${currentLang}/#services`} 
+                      className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 px-3 py-2 rounded transition-colors"
+                      onClick={() => setIsDropdownOpen(false)}
+                    >
+                      {headerData.services_dropdown.ai_strategy}
+                    </Link>
+                    <Link 
+                      href={`/${currentLang}/#services`} 
+                      className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 px-3 py-2 rounded transition-colors"
+                      onClick={() => setIsDropdownOpen(false)}
+                    >
+                      {headerData.services_dropdown.private_ai}
+                    </Link>
+                    <Link 
+                      href={`/${currentLang}/#services`} 
+                      className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 px-3 py-2 rounded transition-colors"
+                      onClick={() => setIsDropdownOpen(false)}
+                    >
+                      {headerData.services_dropdown.data_sovereignty}
+                    </Link>
+                    <Link 
+                      href={`/${currentLang}/#services`} 
+                      className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 px-3 py-2 rounded transition-colors"
+                      onClick={() => setIsDropdownOpen(false)}
+                    >
+                      {headerData.services_dropdown.ai_apps}
+                    </Link>
+                  </div>
+                </div>
               </div>
-            </div>
+            )}
           </div>
           <Link
             href={`/${currentLang}/#expertise`}
@@ -115,16 +168,16 @@ export default function Header({ currentPage = "home", dict }: HeaderProps) {
                   </DrawerClose>
                   <div className="ml-4 space-y-2">
                     <DrawerClose asChild>
-                      <Link href={`/${currentLang}/#services`} className="text-sm text-gray-300 hover:text-white transition-colors block">{headerData.services_dropdown.technology_advisory}</Link>
+                      <Link href={`/${currentLang}/#services`} className="text-sm text-gray-300 hover:text-white transition-colors block">{headerData.services_dropdown.ai_strategy}</Link>
                     </DrawerClose>
                     <DrawerClose asChild>
-                      <Link href={`/${currentLang}/#services`} className="text-sm text-gray-300 hover:text-white transition-colors block">{headerData.services_dropdown.ai_developer_productivity}</Link>
+                      <Link href={`/${currentLang}/#services`} className="text-sm text-gray-300 hover:text-white transition-colors block">{headerData.services_dropdown.private_ai}</Link>
                     </DrawerClose>
                     <DrawerClose asChild>
-                      <Link href={`/${currentLang}/#services`} className="text-sm text-gray-300 hover:text-white transition-colors block">{headerData.services_dropdown.enterprise_blockchain}</Link>
+                      <Link href={`/${currentLang}/#services`} className="text-sm text-gray-300 hover:text-white transition-colors block">{headerData.services_dropdown.data_sovereignty}</Link>
                     </DrawerClose>
                     <DrawerClose asChild>
-                      <Link href={`/${currentLang}/#services`} className="text-sm text-gray-300 hover:text-white transition-colors block">{headerData.services_dropdown.devsecops_aiops}</Link>
+                      <Link href={`/${currentLang}/#services`} className="text-sm text-gray-300 hover:text-white transition-colors block">{headerData.services_dropdown.ai_apps}</Link>
                     </DrawerClose>
                   </div>
                 </div>
