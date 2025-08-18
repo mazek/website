@@ -72,10 +72,10 @@ export default function FourPillars() {
       <div className="w-full max-w-6xl mx-auto px-6 md:px-8">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl text-gray-900">
-            Our Core Services
+            Services
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Enterprise AI transformation through strategic advisory, custom development, and intelligent automation
+           We help you win by providing solution using best techonologies available in the market. 
           </p>
         </div>
 
