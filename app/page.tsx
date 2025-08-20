@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import ClientButton from "@/components/ui/ClientButton"
 import { Brain, Code, Database, Shield } from "lucide-react"
 import EntropyAnimation from "@/components/ui/EntropyAnimation"
+import Image from "next/image"
 
 export default function ConsultingLandingPage() {
   return (
@@ -139,14 +140,18 @@ export default function ConsultingLandingPage() {
               Our Clients
             </h3>
             <div className="flex items-center justify-center gap-12 md:gap-16 opacity-60 hover:opacity-80 transition-opacity">
-              <img 
+              <Image 
                 src="/logos/Agro-Contracts-logo.png" 
                 alt="Agro Contracts" 
+                width={200}
+                height={160}
                 className="h-32 md:h-40 w-auto grayscale hover:grayscale-0 transition-all duration-300"
               />
-              <img 
+              <Image 
                 src="/logos/autopay.png" 
                 alt="Autopay" 
+                width={200}
+                height={160}
                 className="h-32 md:h-40 w-auto grayscale hover:grayscale-0 transition-all duration-300"
               />
             </div>
