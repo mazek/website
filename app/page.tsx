@@ -4,6 +4,7 @@ import FourPillars from "@/components/sections/FourPillars"
 import { Badge } from "@/components/ui/badge"
 import ClientButton from "@/components/ui/ClientButton"
 import { Brain, Code, Database, Shield } from "lucide-react"
+import EntropyAnimation from "@/components/ui/EntropyAnimation"
 
 export default function ConsultingLandingPage() {
   return (
@@ -15,26 +16,11 @@ export default function ConsultingLandingPage() {
         {/* Subtle gradient background with dot pattern */}
         <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white"></div>
         
-        {/* Bitropy dot pattern background */}
-        <div className="absolute inset-0 opacity-20">
-          {/* Purple dots scattered pattern */}
-          <div className="absolute top-20 left-10 w-12 h-12 bg-purple-400 rounded-full animate-pulse" style={{animationDuration: '4s'}}></div>
-          <div className="absolute top-32 right-20 w-8 h-8 bg-purple-500 rounded-full animate-pulse" style={{animationDuration: '6s'}}></div>
-          <div className="absolute top-16 right-1/3 w-16 h-16 bg-purple-300 rounded-full animate-pulse" style={{animationDuration: '5s'}}></div>
-          <div className="absolute top-40 left-1/4 w-12 h-12 bg-purple-400 rounded-full animate-pulse" style={{animationDuration: '7s'}}></div>
-          <div className="absolute top-24 left-2/3 w-10 h-10 bg-purple-500 rounded-full animate-pulse" style={{animationDuration: '4.5s'}}></div>
-          
-          {/* Pink/magenta dots */}
-          <div className="absolute top-28 right-1/4 w-14 h-14 bg-pink-400 rounded-full animate-pulse" style={{animationDuration: '5.5s'}}></div>
-          <div className="absolute top-44 left-1/3 w-10 h-10 bg-pink-500 rounded-full animate-pulse" style={{animationDuration: '6.5s'}}></div>
-          <div className="absolute top-12 left-1/2 w-20 h-20 bg-pink-300 rounded-full animate-pulse" style={{animationDuration: '3.5s'}}></div>
-          <div className="absolute top-36 right-1/6 w-12 h-12 bg-pink-400 rounded-full animate-pulse" style={{animationDuration: '8s'}}></div>
-          
-          {/* Bottom area dots */}
-          <div className="absolute bottom-32 left-16 w-14 h-14 bg-purple-400 rounded-full animate-pulse" style={{animationDuration: '5s'}}></div>
-          <div className="absolute bottom-20 right-24 w-8 h-8 bg-pink-500 rounded-full animate-pulse" style={{animationDuration: '7s'}}></div>
-          <div className="absolute bottom-40 left-2/5 w-16 h-16 bg-purple-300 rounded-full animate-pulse" style={{animationDuration: '4s'}}></div>
-          <div className="absolute bottom-28 right-1/3 w-12 h-12 bg-pink-400 rounded-full animate-pulse" style={{animationDuration: '6s'}}></div>
+        {/* Entropy Animation Background */}
+        <div className="absolute inset-0 opacity-30">
+          <EntropyAnimation 
+            latticeCount={3}
+          />
         </div>
 
         <div className="w-full max-w-6xl mx-auto px-6 md:px-8 relative z-10">
