@@ -131,6 +131,28 @@ export default function ConsultingLandingPage() {
         </div>
       </section>
 
+      {/* Clients Section */}
+      <section className="py-16 bg-white">
+        <div className="w-full max-w-6xl mx-auto px-6 md:px-8">
+          <div className="text-center space-y-8">
+            <h3 className="text-2xl font-semibold text-gray-900">
+              Our Clients
+            </h3>
+            <div className="flex items-center justify-center gap-12 md:gap-16 opacity-60 hover:opacity-80 transition-opacity">
+              <img 
+                src="/logos/Agro-Contracts-logo.png" 
+                alt="Agro Contracts" 
+                className="h-32 md:h-40 w-auto grayscale hover:grayscale-0 transition-all duration-300"
+              />
+              <img 
+                src="/logos/autopay.png" 
+                alt="Autopay" 
+                className="h-32 md:h-40 w-auto grayscale hover:grayscale-0 transition-all duration-300"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Case Studies Section */}
       <section id="testimonials" className="py-24 md:py-32 bg-gray-50">
