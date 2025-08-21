@@ -26,17 +26,18 @@ export default function ConsultingLandingPage() {
         <div className="w-full max-w-6xl mx-auto px-6 md:px-8 relative z-10">
           <div className="text-center space-y-6 max-w-3xl mx-auto">
             <h1 className="text-5xl font-semibold tracking-tight sm:text-6xl md:text-7xl text-gray-900">
-              We Build
+              Fast Track Your
               <span className="text-purple-600">
                 {" "}
-                Enterprise AI
+                AI Transformation
               </span>
-              {" "}
-              That Scales
             </h1>
+            <p className="text-2xl font-medium text-gray-700 mt-4">
+              Real Results in Weeks, Not Years
+            </p>
 
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              From strategy to implementation, we help enterprises adopt AI while maintaining complete data control and compliance.
+              Skip the endless planning. We deploy production-ready AI solutions that deliver measurable ROI while maintaining complete data control.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
@@ -45,7 +46,7 @@ export default function ConsultingLandingPage() {
                 className="text-lg font-semibold px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors"
                 href="https://calendly.com/darek-bitropy/call"
               >
-                Accelerate Your Growth
+                Start Your AI Fast Track
               </ClientButton>
             </div>
           </div>
@@ -57,7 +58,7 @@ export default function ConsultingLandingPage() {
       <FourPillars />
 
       {/* Clients Strip */}
-      <section className="py-16 bg-white border-t border-gray-100">
+      <section className="py-16 bg-gray-50">
         <div className="w-full max-w-6xl mx-auto px-6 md:px-8">
           <div className="flex items-center justify-center gap-16 md:gap-20 opacity-70 hover:opacity-90 transition-opacity">
             <Image 
@@ -79,7 +80,7 @@ export default function ConsultingLandingPage() {
       </section>
 
       {/* Expertise Section */}
-      <section id="expertise" className="py-24 md:py-32 bg-gray-50">
+      <section id="expertise" className="py-24 md:py-32 bg-white">
         <div className="w-full max-w-6xl mx-auto px-6 md:px-8">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl text-gray-900">
@@ -124,7 +125,7 @@ export default function ConsultingLandingPage() {
               Real Results
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Case studies from our technology consulting engagements
+              Delivered in weeks, not months
             </p>
           </div>
 
@@ -147,11 +148,11 @@ export default function ConsultingLandingPage() {
                 <div className="flex items-center space-x-3 mb-4">
                   <Shield className="h-6 w-6 text-purple-600" />
                 </div>
-                <h3 className="text-2xl font-semibold text-gray-900">SaaS M&A Readiness</h3>
+                <h3 className="text-2xl font-semibold text-gray-900">Private USDC Payment Gateway</h3>
                 <p className="text-gray-600 leading-relaxed text-lg">
-                  Transformed SaaS security posture for acquisition. Achieved SOC 2 Type II and ISO 27001 certifications, significantly increasing valuation.
+                  Built secure, self-hosted payment infrastructure for USDC transactions. Enabled private stablecoin payments while maintaining complete transaction privacy and regulatory compliance.
                 </p>
-                <p className="text-purple-600 font-semibold text-sm">Result: 3x valuation increase</p>
+                <p className="text-purple-600 font-semibold text-sm">Result: $10M+ processed, zero custody risk</p>
               </div>
             </div>
           </div>

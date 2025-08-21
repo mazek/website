@@ -85,14 +85,14 @@ export default function ContactPageClient() {
         <div className="w-full max-w-6xl mx-auto px-6 md:px-8">
           <div className="text-center space-y-4 mb-16">
             <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl text-gray-900">
-              Get In
+              Start Your
               <span className="text-purple-600">
                 {" "}
-                Touch
+                AI Fast Track
               </span>
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Ready to scale your technology? Let&apos;s discuss how our expert teams can help accelerate your growth.
+              Ready to see real AI results in weeks? Let&apos;s discuss your transformation roadmap.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
               <Button
@@ -153,7 +153,7 @@ export default function ContactPageClient() {
               <CardHeader>
                 <CardTitle className="text-2xl font-semibold text-gray-900">Send us a message</CardTitle>
                 <CardDescription className="text-lg text-gray-600">
-                  Tell us about your project and we&apos;ll get back to you within 24 hours.
+                  Tell us about your AI goals and we&apos;ll respond with a fast track plan within 24 hours.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -231,7 +231,7 @@ export default function ContactPageClient() {
                       id="subject"
                       name="subject"
                       type="text"
-                      placeholder="What can we help you with?"
+                      placeholder="How can we fast track your AI journey?"
                       value={formData.subject}
                       onChange={handleInputChange}
                       required
@@ -247,7 +247,7 @@ export default function ContactPageClient() {
                     <Textarea
                       id="message"
                       name="message"
-                      placeholder="Tell us about your project, challenges, or how we can help..."
+                      placeholder="Tell us about your AI goals, timeline, and current challenges..."
                       rows={6}
                       value={formData.message}
                       onChange={handleInputChange}

@@ -6,16 +6,16 @@ import Link from "next/link"
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-50 border-t border-gray-200 py-16">
+    <footer className="bg-gray-900 py-16">
       <div className="w-full max-w-6xl mx-auto px-6 md:px-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <BitropyLogo />
+              <BitropyLogo variant="dark" />
             </div>
             <div className="space-y-2">
-              <p className="text-gray-600">
-                Strategic Technology Architecture for Modern Enterprises
+              <p className="text-gray-400">
+                Enterprise AI Fast Track Partners · From Strategy to Results in Weeks
               </p>
               <div className="text-gray-500 text-sm">
                 <p>Bitropy sp. z o.o.</p>
@@ -35,16 +35,16 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="flex flex-col items-center md:items-start">
-            <p className="text-gray-500">© {new Date().getFullYear()} bitropy.io. All rights reserved.</p>
-            <p className="text-gray-400 text-sm mt-2">Made in Europe 🇪🇺 with love ❤️</p>
+            <p className="text-gray-400">© {new Date().getFullYear()} bitropy.io. All rights reserved.</p>
+            <p className="text-gray-500 text-sm mt-2">Made in Europe 🇪🇺 with love ❤️</p>
           </div>
           <div className="flex items-center space-x-6 mt-4 md:mt-0">
-            <Link href="/privacy" className="text-gray-500 hover:text-gray-900 transition-colors">
+            <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
               Privacy Policy
             </Link>
-            <Link href="https://www.linkedin.com/company/bitropy/" className="text-gray-500 hover:text-gray-900 transition-colors">
+            <Link href="https://www.linkedin.com/company/bitropy/" className="text-gray-400 hover:text-white transition-colors">
               <span className="sr-only">LinkedIn</span>
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
                 <path

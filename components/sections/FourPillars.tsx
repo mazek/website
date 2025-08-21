@@ -27,7 +27,7 @@ export default function FourPillars() {
             Services
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            We help you win by providing solutions using best technologies available in the market
+            Three proven paths to accelerate your AI journey
           </p>
         </div>
 
