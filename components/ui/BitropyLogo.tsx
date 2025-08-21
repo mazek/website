@@ -13,7 +13,7 @@ export default function BitropyLogo({ className = "h-12 w-auto", variant = "dark
         alt="Bitropy"
         width={120}
         height={49}
-        className="w-full h-full"
+        className="h-full w-auto object-contain object-left"
       />
     </div>
   )

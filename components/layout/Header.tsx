@@ -22,8 +22,8 @@ export default function Header({ currentPage = "home" }: HeaderProps) {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
       <div className="w-full max-w-6xl mx-auto flex h-20 items-center justify-between px-6 md:px-8">
-        <Link href="/" className="flex items-center space-x-3">
-          <BitropyLogo className="h-12 w-auto" variant="light" />
+        <Link href="/" className="flex items-center flex-shrink-0">
+          <BitropyLogo className="h-12 w-auto flex-shrink-0" variant="light" />
         </Link>
 
         <nav className="hidden md:flex items-center space-x-8">
@@ -54,7 +54,7 @@ export default function Header({ currentPage = "home" }: HeaderProps) {
           </Link>
         </nav>
 
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 flex-shrink-0">
           <Button
             asChild
             className="hidden md:inline-flex bg-purple-600 hover:bg-purple-700 text-white text-sm px-4 py-2"
