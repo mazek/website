@@ -1,4 +1,4 @@
-import { Brain, Code, Database, Shield } from "lucide-react"
+import { Brain, Code, Shield } from "lucide-react"
 
 export default function FourPillars() {
   const services = [

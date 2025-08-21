@@ -1,9 +1,8 @@
 import Footer from "@/components/layout/Footer"
 import Header from "@/components/layout/Header"
 import FourPillars from "@/components/sections/FourPillars"
-import { Badge } from "@/components/ui/badge"
 import ClientButton from "@/components/ui/ClientButton"
-import { Brain, Code, Database, Shield } from "lucide-react"
+import { Code, Shield } from "lucide-react"
 import EntropyAnimation from "@/components/ui/EntropyAnimation"
 import Image from "next/image"
 
