@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button"
 import { Drawer, DrawerClose, DrawerContent, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer"
 import { Menu } from "lucide-react"
 import Link from "next/link"
-import { } from "react"
 
 interface HeaderProps {
   currentPage?: "home" | "about" | "privacy" | "articles" | "contact"
