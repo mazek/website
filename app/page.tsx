@@ -58,22 +58,22 @@ export default function ConsultingLandingPage() {
       <FourPillars />
 
       {/* Clients Strip */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-12 md:py-16 bg-gray-50 overflow-hidden">
         <div className="w-full max-w-6xl mx-auto px-6 md:px-8">
-          <div className="flex items-center justify-center gap-16 md:gap-20 opacity-70 hover:opacity-90 transition-opacity">
+          <div className="flex items-center justify-center gap-8 sm:gap-12 md:gap-20 opacity-70 hover:opacity-90 transition-opacity">
             <Image 
               src="/logos/Agro-Contracts-logo.png" 
               alt="Agro Contracts" 
               width={240}
               height={120}
-              className="h-32 md:h-40 w-auto grayscale hover:grayscale-0 transition-all duration-300"
+              className="h-16 sm:h-24 md:h-32 lg:h-40 w-auto max-w-[140px] sm:max-w-[180px] md:max-w-none grayscale hover:grayscale-0 transition-all duration-300"
             />
             <Image 
               src="/logos/autopay.png" 
               alt="Autopay" 
               width={240}
               height={120}
-              className="h-32 md:h-40 w-auto grayscale hover:grayscale-0 transition-all duration-300"
+              className="h-16 sm:h-24 md:h-32 lg:h-40 w-auto max-w-[140px] sm:max-w-[180px] md:max-w-none grayscale hover:grayscale-0 transition-all duration-300"
             />
           </div>
         </div>
