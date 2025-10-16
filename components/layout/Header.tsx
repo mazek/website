@@ -11,7 +11,7 @@ interface HeaderProps {
   currentPage?: "home" | "about" | "privacy" | "articles" | "contact"
 }
 
-export default function Header({ currentPage = "home" }: HeaderProps) {
+export default function Header({ }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false)
 
   const handleNavClick = () => {
@@ -45,13 +45,6 @@ export default function Header({ currentPage = "home" }: HeaderProps) {
           >
             Case Studies
           </Link>
-          <Link
-            href={`/about`}
-            className={`text-base font-semibold transition-colors ${currentPage === "about" ? "text-purple-400" : "text-gray-300 hover:text-purple-400"
-              }`}
-          >
-            About
-          </Link>
         </nav>
 
         <div className="flex items-center space-x-4 flex-shrink-0">
@@ -72,33 +65,26 @@ export default function Header({ currentPage = "home" }: HeaderProps) {
             <DrawerContent className="p-6 md:hidden bg-white text-gray-900 border-gray-200">
               <DrawerTitle className="sr-only">Main Menu</DrawerTitle>
               <nav className="flex flex-col space-y-6 mt-4">
-                <Link 
-                  href="#services" 
+                <Link
+                  href="#services"
                   onClick={handleNavClick}
                   className="text-lg font-medium text-gray-900 hover:text-gray-700 transition-colors"
                 >
                   Services
                 </Link>
-                <Link 
-                  href="#expertise" 
+                <Link
+                  href="#expertise"
                   onClick={handleNavClick}
                   className="text-lg font-medium text-gray-900 hover:text-gray-700 transition-colors"
                 >
                   Why Bitropy
                 </Link>
-                <Link 
-                  href="#testimonials" 
+                <Link
+                  href="#testimonials"
                   onClick={handleNavClick}
                   className="text-lg font-medium text-gray-900 hover:text-gray-700 transition-colors"
                 >
                   Case Studies
-                </Link>
-                <Link 
-                  href="/about" 
-                  onClick={handleNavClick}
-                  className="text-lg font-medium text-gray-900 hover:text-gray-700 transition-colors"
-                >
-                  About
                 </Link>
                 <div className="pt-4 border-t border-gray-200">
                   <Link 

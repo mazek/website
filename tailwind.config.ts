@@ -11,6 +11,18 @@ const config: Config = {
   theme: {
   	extend: {
   		colors: {
+  			purple: {
+  				'50': '#f3f0fd',
+  				'100': '#e9e4fb',
+  				'200': '#d5ccf8',
+  				'300': '#c0b1f3',
+  				'400': '#ab92ed',
+  				'500': '#9b7feb',
+  				'600': '#967deb',
+  				'700': '#8160e0',
+  				'800': '#6b4dc5',
+  				'900': '#5740a0',
+  			},
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

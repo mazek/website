@@ -1,6 +1,6 @@
 import Footer from "@/components/layout/Footer"
 import Header from "@/components/layout/Header"
-import Breadcrumb, { BreadcrumbStructuredData } from "@/components/ui/Breadcrumb"
+import { BreadcrumbStructuredData } from "@/components/ui/Breadcrumb"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -57,77 +57,79 @@ export default function ArticlesPage() {
       <Header currentPage="articles" />
 
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden bg-gray-50">
-        {/* Clean background */}
+      <section className="relative py-24 md:py-40 overflow-hidden">
+        {/* Subtle gradient background */}
         <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white"></div>
 
         <div className="w-full max-w-6xl mx-auto px-6 md:px-8 relative z-10">
-          <div className="mb-8">
-            <Breadcrumb items={breadcrumbItems} lang="en" />
-          </div>
-          <div className="text-center space-y-8 max-w-4xl mx-auto">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-gray-900">
-              Articles
+          <div className="text-center space-y-6 max-w-3xl mx-auto">
+            <h1 className="text-5xl font-semibold tracking-tight sm:text-6xl md:text-7xl text-gray-900">
+              Strategic <span className="text-purple-600">Insights</span>
             </h1>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              Expert perspectives on AI implementation, data sovereignty, and enterprise technology transformation
+            </p>
           </div>
         </div>
       </section>
 
       {/* Articles Grid */}
-      <section className="py-20 md:py-32 relative bg-white">
+      <section className="py-24 md:py-32 relative bg-white">
         <div className="w-full max-w-6xl mx-auto px-6 md:px-8">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {articles.map((article) => (
-              <Card key={article.id} className="bg-white border-gray-200 hover:border-purple-200 hover:shadow-lg hover:shadow-purple-100 transition-all duration-300 group overflow-hidden">
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={article.image}
-                    alt={article.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                  <Badge className="absolute top-4 left-4 bg-purple-600/90 text-white border-0">
-                    {article.category}
-                  </Badge>
-                </div>
-
-                <CardHeader className="pb-4">
-                  <div className="flex items-center space-x-4 text-sm text-gray-500 mb-2">
-                    <div className="flex items-center space-x-1">
-                      <Calendar className="h-3 w-3" />
-                      <span>{new Date(article.publishDate).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'short',
-                        day: 'numeric'
-                      })}</span>
-                    </div>
-                    <div className="flex items-center space-x-1">
-                      <Clock className="h-3 w-3" />
-                      <span>{article.readTime}</span>
-                    </div>
+              <div key={article.id} className="group">
+                <Card className="bg-white border border-gray-200 hover:border-purple-300 hover:shadow-xl transition-all duration-300 h-full overflow-hidden">
+                  <div className="relative h-48 overflow-hidden bg-gradient-to-br from-purple-50 to-gray-50">
+                    <Image
+                      src={article.image}
+                      alt={article.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+                    <Badge className="absolute top-4 left-4 bg-purple-600 text-white border-0 shadow-lg">
+                      {article.category}
+                    </Badge>
                   </div>
-                  <CardTitle className="text-gray-900 text-xl font-bold line-clamp-2 group-hover:text-purple-600 transition-colors">
-                    {article.title}
-                  </CardTitle>
-                </CardHeader>
 
-                <CardContent className="pt-0">
-                  <CardDescription className="text-gray-700 text-base line-clamp-3 mb-4">
-                    {article.excerpt}
-                  </CardDescription>
-                  <Link href={`/articles/${article.id}`}>
-                    <Button
-                      variant="ghost"
-                      className="text-purple-600 hover:text-purple-700 hover:bg-purple-50 p-0 h-auto"
-                    >
-                      Read More
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                </CardContent>
-              </Card>
+                  <CardHeader className="pb-4">
+                    <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                      <div className="flex items-center gap-1">
+                        <Calendar className="h-3.5 w-3.5" />
+                        <span>{new Date(article.publishDate).toLocaleDateString('en-US', {
+                          year: 'numeric',
+                          month: 'short',
+                          day: 'numeric'
+                        })}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Clock className="h-3.5 w-3.5" />
+                        <span>{article.readTime}</span>
+                      </div>
+                    </div>
+                    <CardTitle className="text-gray-900 text-xl font-semibold line-clamp-2 group-hover:text-purple-600 transition-colors">
+                      {article.title}
+                    </CardTitle>
+                  </CardHeader>
+
+                  <CardContent className="pt-0">
+                    <CardDescription className="text-gray-600 text-base line-clamp-3 mb-6">
+                      {article.excerpt}
+                    </CardDescription>
+                    <Link href={`/articles/${article.id}`}>
+                      <Button
+                        variant="ghost"
+                        className="text-purple-600 hover:text-purple-700 hover:bg-purple-50 font-medium p-0 h-auto group/btn"
+                      >
+                        Read Article
+                        <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                      </Button>
+                    </Link>
+                  </CardContent>
+                </Card>
+              </div>
             ))}
           </div>
 

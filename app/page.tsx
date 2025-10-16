@@ -2,9 +2,10 @@ import Footer from "@/components/layout/Footer"
 import Header from "@/components/layout/Header"
 import FourPillars from "@/components/sections/FourPillars"
 import ClientButton from "@/components/ui/ClientButton"
-import { Code, Shield } from "lucide-react"
+import { Code, Shield, ExternalLink } from "lucide-react"
 import EntropyAnimation from "@/components/ui/EntropyAnimation"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function ConsultingLandingPage() {
   return (
@@ -26,18 +27,15 @@ export default function ConsultingLandingPage() {
         <div className="w-full max-w-6xl mx-auto px-6 md:px-8 relative z-10">
           <div className="text-center space-y-6 max-w-3xl mx-auto">
             <h1 className="text-5xl font-semibold tracking-tight sm:text-6xl md:text-7xl text-gray-900">
-              Get Real Results with
+              Empowered by
               <span className="text-purple-600">
                 {" "}
                 AI
               </span>
             </h1>
-            <p className="text-2xl font-medium text-gray-700 mt-4">
-              Not Just the Hype
-            </p>
 
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Skip the endless planning. We deploy production-ready AI solutions that deliver measurable ROI while maintaining complete data control.
+              We empower product teams to harness AI, work smarter, and create products that truly stand out.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
@@ -57,60 +55,41 @@ export default function ConsultingLandingPage() {
       {/* Services Section */}
       <FourPillars />
 
-      {/* Clients Strip */}
-      <section className="py-12 md:py-16 bg-gray-50 overflow-hidden">
-        <div className="w-full max-w-6xl mx-auto px-6 md:px-8">
-          <div className="flex items-center justify-center gap-8 sm:gap-12 md:gap-20 opacity-70 hover:opacity-90 transition-opacity">
-            <Image 
-              src="/logos/Agro-Contracts-logo.png" 
-              alt="Agro Contracts" 
-              width={240}
-              height={120}
-              className="h-16 sm:h-24 md:h-32 lg:h-40 w-auto max-w-[140px] sm:max-w-[180px] md:max-w-none grayscale hover:grayscale-0 transition-all duration-300"
-            />
-            <Image 
-              src="/logos/autopay.png" 
-              alt="Autopay" 
-              width={240}
-              height={120}
-              className="h-16 sm:h-24 md:h-32 lg:h-40 w-auto max-w-[140px] sm:max-w-[180px] md:max-w-none grayscale hover:grayscale-0 transition-all duration-300"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Expertise Section */}
+      {/* Why Bitropy Section */}
       <section id="expertise" className="py-24 md:py-32 bg-white">
         <div className="w-full max-w-6xl mx-auto px-6 md:px-8">
-          <div className="text-center space-y-4 mb-16">
+          <div className="text-center space-y-6 mb-16 max-w-4xl mx-auto">
             <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl text-gray-900">
-              Why Bitropy?
+              Bitropy is <span className="text-purple-600">different</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Proven leadership with real-world results
+            <p className="text-xl text-gray-600 leading-relaxed">
+              We&apos;re a technology-first company helping enterprises adopt AI <span className="font-semibold">securely, privately, and quickly</span>.
+            </p>
+            <p className="text-xl text-gray-600 leading-relaxed">
+              Unlike traditional consultancies that deliver slides and roadmaps, we are <span className="font-semibold">forward-deployed engineers</span> who build, deploy, and optimize AI solutions that deliver <span className="font-semibold">measurable business value in weeks—not years</span>.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 mt-16">
             <div className="text-center space-y-4">
-              <div className="text-4xl font-bold text-purple-600">2x</div>
-              <h3 className="text-xl font-semibold text-gray-900">9-Figure Exits</h3>
+              <div className="text-4xl font-bold text-purple-600">Forward-Deployed</div>
+              <h3 className="text-xl font-semibold text-gray-900">Engineers, Not Consultants</h3>
               <p className="text-gray-600">
-                Led technology at Nordcloud (IBM acquisition) and Worksuite, delivering exceptional returns
+                AI specialists and data scientists who build and deploy, not just strategize
               </p>
             </div>
             <div className="text-center space-y-4">
-              <div className="text-4xl font-bold text-purple-600">0→1000+</div>
-              <h3 className="text-xl font-semibold text-gray-900">Team Scaling</h3>
+              <div className="text-4xl font-bold text-purple-600">Weeks</div>
+              <h3 className="text-xl font-semibold text-gray-900">To Measurable Value</h3>
               <p className="text-gray-600">
-                Built and scaled engineering organizations from startup to enterprise level
+                Working AI solutions and optimized deployments, not PowerPoints and roadmaps
               </p>
             </div>
             <div className="text-center space-y-4">
-              <div className="text-4xl font-bold text-purple-600">Full-Stack</div>
-              <h3 className="text-xl font-semibold text-gray-900">AI Mastery</h3>
+              <div className="text-4xl font-bold text-purple-600">Transparent</div>
+              <h3 className="text-xl font-semibold text-gray-900">Value-Based Pricing</h3>
               <p className="text-gray-600">
-                From infrastructure to applications, we deliver complete AI solutions
+                Long-term impact focus with transparent, value-based engagement models
               </p>
             </div>
           </div>
@@ -159,6 +138,65 @@ export default function ConsultingLandingPage() {
         </div>
       </section>
 
+      {/* Founders Section */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="w-full max-w-6xl mx-auto px-6 md:px-8">
+          <div className="text-center space-y-4 mb-16">
+            <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl text-gray-900">
+              Backed by Decades of Experience
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            {/* Darek Dwornikowski */}
+            <div className="space-y-4">
+              <div className="relative w-48 h-48 mx-auto">
+                <Image
+                  src="/darek.jpg"
+                  alt="Darek Dwornikowski"
+                  width={192}
+                  height={192}
+                  className="rounded-lg object-cover w-full h-full"
+                />
+              </div>
+              <div className="border-t-2 border-gray-300 pt-4 text-center">
+                <h3 className="text-xl font-semibold text-purple-600 mb-1">Darek Dwornikowski</h3>
+                <p className="text-lg font-medium text-purple-600 mb-3">co-founder and CEO</p>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Helped build and scale Europe&apos;s largest cloud integrator - Nordcloud successfully exited to IBM for 500M. ex Computer scientist and researcher.
+                </p>
+                <Link
+                  href="https://linkedin.com/in/darekd"
+                  target="_blank"
+                  className="inline-flex items-center text-gray-600 hover:text-purple-600 transition-colors mt-3 text-sm"
+                >
+                  Connect on LinkedIn <ExternalLink className="h-3 w-3 ml-1" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Marcin Mazurek */}
+            <div className="space-y-4">
+              <div className="relative w-48 h-48 mx-auto">
+                <Image
+                  src="/marcin.png"
+                  alt="Marcin Mazurek"
+                  width={192}
+                  height={192}
+                  className="rounded-lg object-cover w-full h-full"
+                />
+              </div>
+              <div className="border-t-2 border-gray-300 pt-4 text-center">
+                <h3 className="text-xl font-semibold text-purple-600 mb-1">Marcin Mazurek</h3>
+                <p className="text-lg font-medium text-purple-600 mb-3">co-founder and board member</p>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  CPTO & Board member @ Autopay Group, VP of Technology in Allegro - biggest European marketplace, Stanford GSB alumni.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>

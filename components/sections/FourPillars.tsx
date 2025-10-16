@@ -4,18 +4,18 @@ export default function FourPillars() {
   const services = [
     {
       icon: Brain,
-      title: "AI Strategy & Private Implementation",
-      description: "Deploy enterprise AI with complete data control. We deliver governance frameworks, on-premises LLM deployment, and compliance solutions that keep your data sovereign while maximizing AI capabilities."
-    },
-    {
-      icon: Code,
-      title: "Custom AI Development",
-      description: "Build production-ready AI solutions tailored to your needs. From LLM fine-tuning and RAG systems to intelligent automation, we create AI that integrates seamlessly with your operations."
+      title: "AI Upskill",
+      description: "Make people more productive with AI. We train your teams to leverage AI tools effectively, turning your workforce into AI-empowered problem solvers who deliver faster, smarter results."
     },
     {
       icon: Shield,
-      title: "Technical Leadership & Scale",
-      description: "Leverage our exit-proven expertise to scale your technology. With experience building teams from 0-1000+ and two 9-figure exits, we provide fractional CTO services and M&A readiness."
+      title: "AI Fast Track",
+      description: "Improve your company processes with AI done smart. We integrate AI into your workflows with governance, compliance, and data sovereignty - delivering automation that works within your constraints."
+    },
+    {
+      icon: Code,
+      title: "AI Development",
+      description: "Custom agentic app development. We build intelligent systems that act autonomously - from AI agents that handle customer support to workflows that coordinate complex business processes."
     }
   ]
 
@@ -24,10 +24,10 @@ export default function FourPillars() {
       <div className="w-full max-w-7xl mx-auto px-6 md:px-8">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl text-gray-900">
-            Services
+            Our services are focused on making real impact
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Three proven paths to accelerate your AI journey
+            We empower your teams to harness AI, work smarter, and create products that truly stand out
           </p>
         </div>
 

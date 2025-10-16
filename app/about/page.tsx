@@ -65,6 +65,66 @@ export default function AboutPage() {
           </div>
 
           <div className="max-w-4xl mx-auto space-y-12">
+            {/* Founders Section */}
+            <Card className="bg-white border-gray-200 p-8">
+              <CardContent className="space-y-8">
+                <div className="flex items-center space-x-3 mb-6">
+                  <Users className="h-8 w-8 text-purple-600" />
+                  <h2 className="text-3xl font-medium text-gray-900">Backed by Decades of Experience</h2>
+                </div>
+
+                {/* Two-column founder layout */}
+                <div className="grid md:grid-cols-2 gap-8">
+                  {/* Darek Dwornikowski */}
+                  <div className="space-y-4">
+                    <div className="relative w-48 h-48 mx-auto md:mx-0">
+                      <Image
+                        src="/darek.jpg"
+                        alt="Darek Dwornikowski"
+                        width={192}
+                        height={192}
+                        className="rounded-lg object-cover w-full h-full"
+                      />
+                    </div>
+                    <div className="border-t-2 border-gray-300 pt-4">
+                      <h3 className="text-xl font-semibold text-purple-600 mb-1">Darek Dwornikowski</h3>
+                      <p className="text-lg font-medium text-purple-600 mb-3">co-founder and CEO</p>
+                      <p className="text-sm text-gray-500 leading-relaxed">
+                        Helped build and scale Europe&apos;s largest cloud integrator - Nordcloud successfully exited to IBM for 500M. ex Computer scientist and researcher.
+                      </p>
+                      <Link
+                        href="https://linkedin.com/in/darekd"
+                        target="_blank"
+                        className="inline-flex items-center text-gray-600 hover:text-purple-600 transition-colors mt-3 text-sm"
+                      >
+                        Connect on LinkedIn <ExternalLink className="h-3 w-3 ml-1" />
+                      </Link>
+                    </div>
+                  </div>
+
+                  {/* Marcin Mazurek */}
+                  <div className="space-y-4">
+                    <div className="relative w-48 h-48 mx-auto md:mx-0">
+                      <Image
+                        src="/marcin.png"
+                        alt="Marcin Mazurek"
+                        width={192}
+                        height={192}
+                        className="rounded-lg object-cover w-full h-full"
+                      />
+                    </div>
+                    <div className="border-t-2 border-gray-300 pt-4">
+                      <h3 className="text-xl font-semibold text-purple-600 mb-1">Marcin Mazurek</h3>
+                      <p className="text-lg font-medium text-purple-600 mb-3">co-founder and board member</p>
+                      <p className="text-sm text-gray-500 leading-relaxed">
+                        CPTO & Board member @ Autopay Group, VP of Technology in Allegro - biggest European marketplace, Stanford GSB alumni.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
             {/* Why Bitropy was Created */}
             <Card className="bg-white border-gray-200 p-8">
               <CardContent className="space-y-6">
@@ -73,9 +133,9 @@ export default function AboutPage() {
                   <h2 className="text-3xl font-medium text-gray-900">Why Bitropy was Created</h2>
                 </div>
                 <div className="text-gray-600 space-y-4 leading-relaxed">
-                  <p>As a founder with extensive experience in building and scaling technology organizations, I recognized a critical gap in the market. Many companies struggle to leverage the best available technology to drive their growth and innovation. They often lack the expertise, resources, or strategic guidance needed to make informed technology decisions that can truly transform their business.</p>
-                  <p>Bitropy was born from my desire to help companies in the best possible way to harness cutting-edge technology solutions. Having witnessed firsthand the transformative power of well-implemented technology strategies through my work at Nordcloud, Worksuite, and other ventures, I wanted to create a consultancy that could bridge this gap for businesses of all sizes.</p>
-                  <p>Our mission is to democratize access to world-class technology expertise, ensuring that every company—regardless of size or industry—can leverage the most effective technologies to achieve their goals and stay competitive in today&apos;s rapidly evolving digital landscape.</p>
+                  <p>Between us, we&apos;ve scaled Europe&apos;s largest cloud integrator to a 500M exit, led technology at Europe&apos;s biggest marketplace, and earned Stanford GSB credentials. Through it all, we saw the same pattern: talented companies held back by technology decisions they didn&apos;t need to make alone.</p>
+                  <p>Bitropy exists to change that. We bring the strategic thinking and technical execution from our combined decades of experience directly to companies ready to accelerate their growth. No lengthy discovery phases. No theoretical frameworks. Just proven expertise applied to your specific challenges.</p>
+                  <p>We believe exceptional technology guidance shouldn&apos;t be reserved for enterprise budgets or locked behind consulting bureaucracy. Every ambitious company deserves access to leaders who&apos;ve actually built, scaled, and successfully exited technology organizations.</p>
                 </div>
               </CardContent>
             </Card>
@@ -141,77 +201,6 @@ export default function AboutPage() {
                       </div>
                     </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Founder Section */}
-            <Card className="bg-white border-gray-200 p-8">
-              <CardContent className="space-y-6">
-                <div className="flex items-center space-x-3 mb-6">
-                  <Users className="h-8 w-8 text-purple-600" />
-                  <h2 className="text-3xl font-medium text-gray-900">Meet Our Founder</h2>
-                </div>
-                
-                <div className="flex flex-col lg:flex-row items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-8 mb-8">
-                  <div className="relative flex-shrink-0">
-                    <Image
-                      src="/darek.jpg"
-                      alt="Darek Dwornikowski - CEO & Founder"
-                      width={200}
-                      height={200}
-                      className="rounded-full border-4 border-purple-600"
-                    />
-                  </div>
-                  <div className="space-y-4 text-center lg:text-left">
-                    <div>
-                      <h3 className="text-3xl font-medium text-gray-900 mb-2">Darek Dwornikowski</h3>
-                      <p className="text-xl text-purple-600 mb-2">Founder & CEO, Bitropy</p>
-                      <Link 
-                        href="https://linkedin.com/in/darekd" 
-                        target="_blank"
-                        className="inline-flex items-center text-gray-600 hover:text-purple-600 transition-colors"
-                      >
-                        Connect on LinkedIn <ExternalLink className="h-4 w-4 ml-1" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="text-2xl font-medium text-gray-900 mb-4">Technology Visionary & Serial Entrepreneur</h4>
-                  <div className="text-gray-600 space-y-4 leading-relaxed">
-                    <p>Darek Dwornikowski is an experienced Polish entrepreneur and technology visionary who has been part of two successful exits with nine-figure valuations. Currently serving as CEO of Bitropy, he leads the company&apos;s strategic development, leveraging his extensive experience in building and scaling technology organizations.</p>
-                    <p>Previously, as VP of Engineering and a member of the global leadership team at Nordcloud, Darek was instrumental in the company&apos;s transformation from a startup to a leading European cloud services provider, ultimately acquired by IBM for over $500M. It was Darek who built Nordcloud&apos;s Polish division from the ground up, scaling the team to over 400 employees and developing the company&apos;s SaaS business from scratch.</p>
-                    <p>At Worksuite, serving as CTO, he participated in the company&apos;s sale to growth funds. His experience encompasses not only M&A strategies and preparing companies for exits, but also deep technical expertise in cloud computing, distributed systems, and blockchain, which is supported by his earlier academic career at Poznań University of Technology and his role as co-founder of Tenesys.</p>
-                    <p>Today, Darek actively advises on technical due diligence for VC/PE funds and supports founders in scaling and selling their companies, bringing together his unique combination of technical depth and business acumen to drive successful outcomes.</p>
-                  </div>
-                </div>
-
-                <div className="border-t border-gray-200 pt-6">
-                  <h4 className="text-xl font-medium text-gray-900 mb-3">Key Achievements</h4>
-                  <ul className="space-y-2 text-gray-600">
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Two successful nine-figure exits as key leadership team member
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Built and scaled Nordcloud Poland from 0 to 400+ employees
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Developed SaaS business line that contributed to $500M+ acquisition by IBM
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Deep expertise in cloud computing, distributed systems, and blockchain technology
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Active advisor for VC/PE technical due diligence and founder support
-                    </li>
-                  </ul>
                 </div>
               </CardContent>
             </Card>

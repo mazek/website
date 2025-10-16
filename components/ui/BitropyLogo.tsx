@@ -5,14 +5,14 @@ interface BitropyLogoProps {
   variant?: "light" | "dark"
 }
 
-export default function BitropyLogo({ className = "h-12 w-auto", variant = "dark" }: BitropyLogoProps) {
+export default function BitropyLogo({ className = "h-12 w-auto" }: BitropyLogoProps) {
   return (
     <div className={className}>
       <Image
-        src={variant === "dark" ? "/images/Bitropy.svg" : "/images/Bitropy-w.svg"}
+        src="/images/Bitropy.svg"
         alt="Bitropy"
-        width={120}
-        height={49}
+        width={1152}
+        height={389}
         className="h-full w-auto object-contain object-left"
       />
     </div>
