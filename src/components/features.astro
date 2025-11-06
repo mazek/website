@@ -20,6 +20,7 @@ const features = [
     description:
       "No lock-ins. No hidden costs. Bitropy is built entirely on open-source technologies like Kubernetes and vLLM, giving you full visibility and control.",
     icon: "bx:bxs-heart",
+    techIcons: ["bx:bxl-go-lang", "bx:bxl-rust"],
   },
   {
     title: "Cost Effective",
@@ -67,6 +68,15 @@ const features = [
         <div>
           <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
           <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          {item.techIcons && (
+            <div class="flex gap-2 mt-3">
+              {item.techIcons.map((techIcon) => (
+                <div class="bg-gray-100 rounded p-1.5">
+                  <Icon class="w-5 h-5 text-gray-700" name={techIcon} />
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     ))
