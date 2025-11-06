@@ -48,7 +48,7 @@ export const POST: APIRoute = async ({ request }) => {
     );
 
     const templateId = Number(import.meta.env.BREVO_DOI_TEMPLATE_ID);
-    const redirectionUrl = import.meta.env.BREVO_REDIRECTION_URL || import.meta.env.SITE || "https://bitropy.com";
+    const redirectionUrl = import.meta.env.BREVO_REDIRECTION_URL || import.meta.env.SITE || "https://bitropy.io";
 
     if (!templateId) {
       console.error("BREVO_DOI_TEMPLATE_ID is not configured");

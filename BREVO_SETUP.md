@@ -83,7 +83,7 @@ cp .env.example .env
 BREVO_API_KEY=your_actual_api_key_here
 BREVO_LIST_ID=2
 BREVO_DOI_TEMPLATE_ID=1
-BREVO_REDIRECTION_URL=https://bitropy.com/thank-you
+BREVO_REDIRECTION_URL=https://bitropy.io/thank-you
 ```
 
 Replace the values:

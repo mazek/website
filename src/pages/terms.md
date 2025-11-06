@@ -69,4 +69,4 @@ By using our platform, you agree to be bound by these terms. If you do not agree
 
 9.1. These Terms and Conditions shall be governed by and construed in accordance with the laws of Poland and the European Union, with particular attention to GDPR and EU AI Act compliance requirements.
 
-By using Bitropy, you acknowledge that you have read and understood these Terms and Conditions, and you agree to be bound by them. If you have any questions or concerns, please contact us at contact@bitropy.com.
+By using Bitropy, you acknowledge that you have read and understood these Terms and Conditions, and you agree to be bound by them. If you have any questions or concerns, please contact us at contact@bitropy.io.

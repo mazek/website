@@ -59,7 +59,7 @@ By using Bitropy, you consent to the practices described in this Privacy Policy.
 
 8.2. You have the right to object to processing and to withdraw consent at any time.
 
-8.3. To exercise these rights, please contact us at contact@bitropy.com.
+8.3. To exercise these rights, please contact us at contact@bitropy.io.
 
 ## 9. Changes to this Privacy Policy
 
@@ -69,4 +69,4 @@ By using Bitropy, you consent to the practices described in this Privacy Policy.
 
 ## 10. Contact Us
 
-10.1. If you have any questions, concerns, or requests regarding this Privacy Policy or wish to exercise your data protection rights, please contact us at contact@bitropy.com.
+10.1. If you have any questions, concerns, or requests regarding this Privacy Policy or wish to exercise your data protection rights, please contact us at contact@bitropy.io.
