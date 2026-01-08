@@ -77,16 +77,16 @@ const capabilities = [
       <!-- Capabilities List -->
       <div class="space-y-6 mt-8">
         {capabilities.map((capability) => (
-          <div class="bg-white border-2 border-gray-200 rounded-xl p-6 md:p-8 hover:border-blue-400 hover:shadow-lg transition-all">
+          <div class="bg-white border-2 border-gray-200 rounded-xl p-6 md:p-8 hover:border-[#A898E9] hover:shadow-lg transition-all">
             <div class="flex items-start gap-4">
-              <div class="bg-blue-600 rounded-lg p-3 flex-shrink-0">
+              <div class="bg-[#A898E9] rounded-lg p-3 flex-shrink-0">
                 <Icon class="text-white w-6 h-6" name={capability.icon} />
               </div>
               <div class="flex-1">
                 <h3 class="text-xl font-bold text-gray-900 mb-1">
                   {capability.title}
                 </h3>
-                <p class="text-blue-600 font-medium text-sm mb-3">
+                <p class="text-[#A898E9] font-medium text-sm mb-3">
                   {capability.subtitle}
                 </p>
                 <p class="text-slate-700 leading-relaxed">
@@ -99,7 +99,7 @@ const capabilities = [
       </div>
 
       <!-- Bottom CTA -->
-      <div class="bg-gradient-to-br from-blue-50 to-gray-50 rounded-2xl p-8 md:p-12 mt-12">
+      <div class="bg-gradient-to-br from-[#F3F1FC] to-gray-50 rounded-2xl p-8 md:p-12 mt-12">
         <div class="text-center">
           <h3 class="text-3xl font-bold text-gray-900 mb-4">
             Build production AI, not demos
@@ -109,13 +109,13 @@ const capabilities = [
             secure, scalable, and ready for production.
           </p>
           <div class="flex gap-4 justify-center flex-wrap">
-            <Link href="/contact" class="inline-flex gap-2 items-center" style="background-color: rgb(37, 99, 235);">
+            <Link href="/contact" class="inline-flex gap-2 items-center" style="background-color: #A898E9;">
               <Icon class="text-white w-5 h-5" name="bx:bxs-paper-plane" />
               Learn More
             </Link>
             <a
               href="/contact"
-              class="inline-flex items-center gap-2 px-6 py-3 bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-50 rounded-lg font-medium transition">
+              class="inline-flex items-center gap-2 px-6 py-3 bg-white border-2 border-[#A898E9] text-[#A898E9] hover:bg-[#F3F1FC] rounded-lg font-medium transition">
               <Icon class="w-5 h-5" name="bx:bx-phone" />
               Request a Demo
             </a>
@@ -127,7 +127,7 @@ const capabilities = [
       <div class="text-center mt-8 pt-8 border-t border-gray-200">
         <a
           href="/products"
-          class="inline-flex items-center gap-2 text-gray-600 hover:text-blue-600 font-medium transition">
+          class="inline-flex items-center gap-2 text-gray-600 hover:text-[#A898E9] font-medium transition">
           <Icon class="w-5 h-5" name="bx:bx-left-arrow-alt" />
           Back to All Products
         </a>
