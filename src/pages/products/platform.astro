@@ -1,0 +1,144 @@
+---
+import Container from "@/components/container.astro";
+import Sectionhead from "@/components/sectionhead.astro";
+import Layout from "@/layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+import Link from "@/components/ui/link.astro";
+---
+
+<Layout title="AI Platform">
+  <Container>
+    <!-- Header Section -->
+    <Sectionhead>
+      <Fragment slot="title">AI Platform</Fragment>
+      <Fragment slot="desc">
+        Sovereign AI infrastructure that runs inside your walls
+      </Fragment>
+    </Sectionhead>
+
+    <!-- Main Description -->
+    <div class="flex flex-col gap-8 mx-auto max-w-4xl mt-16">
+      <div class="prose prose-lg max-w-none">
+        <h2 class="font-bold text-3xl text-gray-800">
+          What We Build
+        </h2>
+        <p class="text-lg leading-relaxed text-slate-500">
+          At Bitropy, we build sovereign AI infrastructure that gives enterprises
+          full control over their AI deployments. Our platform is designed for
+          regulated industries where data privacy, security, and compliance
+          are non-negotiable.
+        </p>
+      </div>
+
+      <!-- Product 1: AI Platform -->
+      <div class="bg-emerald-50 rounded-2xl p-8 md:p-12">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="bg-emerald-600 rounded-full p-3">
+            <Icon class="text-white w-8 h-8" name="bx:bxs-server" />
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">
+              Sovereign AI Platform
+            </h3>
+            <p class="text-emerald-700 font-medium mb-4">
+              On-premises AI infrastructure that runs inside your walls
+            </p>
+          </div>
+        </div>
+        <div class="space-y-3 text-slate-700">
+          <p class="leading-relaxed">
+            Our modular platform handles inference, governance, and secure data
+            integrations. Deploy production-scale AI in weeks, not months, with
+            complete data sovereignty.
+          </p>
+          <ul class="list-disc list-inside space-y-2 ml-2">
+            <li>Built on open-source: Kubernetes, vLLM, PostgreSQL</li>
+            <li>Full compliance: GDPR, BaFin, EU AI Act ready</li>
+            <li>70% more cost-effective than traditional consulting builds</li>
+            <li>Deploy in under 2 weeks</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Product 2: MCP Integration -->
+      <div class="bg-gray-50 rounded-2xl p-8 md:p-12">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="bg-gray-800 rounded-full p-3">
+            <Icon class="text-white w-8 h-8" name="bx:bxs-plug" />
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">
+              Model Context Protocol (MCP)
+            </h3>
+            <p class="text-gray-700 font-medium mb-4">
+              Standardized way to connect AI models to your data sources
+            </p>
+          </div>
+        </div>
+        <div class="space-y-3 text-slate-700">
+          <p class="leading-relaxed">
+            We leverage the Model Context Protocol to create secure, standardized
+            connections between AI models and enterprise data sources. No more
+            custom integrations for every tool.
+          </p>
+          <ul class="list-disc list-inside space-y-2 ml-2">
+            <li>Secure data access without exposing sensitive information</li>
+            <li>Standardized protocol for all AI integrations</li>
+            <li>Full audit trails and compliance tracking</li>
+            <li>Works with any LLM or AI model</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Use Cases -->
+      <div class="mt-8">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">
+          Real-World Results
+        </h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="border-l-4 border-emerald-600 pl-6">
+            <h4 class="font-semibold text-lg text-gray-900 mb-2">
+              Pharmaceutical Industry
+            </h4>
+            <p class="text-slate-600">
+              70% reduction in document processing time while maintaining
+              full regulatory compliance and data sovereignty
+            </p>
+          </div>
+          <div class="border-l-4 border-emerald-600 pl-6">
+            <h4 class="font-semibold text-lg text-gray-900 mb-2">
+              Global Banking
+            </h4>
+            <p class="text-slate-600">
+              60% faster KYC and AML operations with complete auditability
+              and on-premises data control
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center mt-12 pt-8 border-t border-gray-200">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">
+          Ready to deploy sovereign AI?
+        </h3>
+        <p class="text-lg text-slate-600 mb-6 max-w-2xl mx-auto">
+          See how Bitropy can help you deploy production-scale AI
+          in under two weeks.
+        </p>
+        <div class="flex gap-4 justify-center">
+          <Link href="/contact" class="inline-flex gap-2 items-center">
+            <Icon class="text-white w-5 h-5" name="bx:bxs-paper-plane" />
+            Get Started
+          </Link>
+          <a
+            href="/products"
+            class="inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-300 hover:border-emerald-600 text-gray-700 hover:text-emerald-600 rounded-lg font-medium transition">
+            <Icon class="w-5 h-5" name="bx:bx-left-arrow-alt" />
+            Back to Products
+          </a>
+        </div>
+      </div>
+    </div>
+  </Container>
+</Layout>

@@ -1,0 +1,137 @@
+---
+import Container from "@/components/container.astro";
+import Sectionhead from "@/components/sectionhead.astro";
+import Layout from "@/layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+import Link from "@/components/ui/link.astro";
+
+const capabilities = [
+  {
+    title: "AI-Native Solution Engineering",
+    subtitle: "From proof of concept to production workloads.",
+    description: "We design and implement AI systems end-to-end including model selection, prompt and agent design, orchestration, evaluation, and deployment into real production environments.",
+    icon: "bx:bxs-cog",
+  },
+  {
+    title: "LLM & Agent Tooling Integration",
+    subtitle: "Modern AI tooling, properly integrated.",
+    description: "We enable secure use of LLMs, agents, function calling, RAG pipelines, and multimodal models integrated directly into existing codebases, CI/CD pipelines, and developer workflows.",
+    icon: "bx:bxs-wrench",
+  },
+  {
+    title: "AI Engineering Stack",
+    subtitle: "Production over prototypes.",
+    description: "We deliver a complete AI stack covering: model access and routing, prompt and context management, guardrails and policy enforcement, observability, logging, and tracing, evaluation, feedback loops, and cost controls. Designed for reliability, debuggability, and scale.",
+    icon: "bx:bxs-layer",
+  },
+  {
+    title: "Platform & Infrastructure Architecture",
+    subtitle: "AI systems that fit your infrastructure.",
+    description: "We architect and deploy AI platforms across cloud, on-prem, and hybrid environments with attention to latency, security boundaries, data residency, and operational constraints.",
+    icon: "bx:bxs-cube",
+  },
+  {
+    title: "Secure AI by Design",
+    subtitle: "Speed without reckless exposure.",
+    description: "We implement guardrails to prevent leakage of proprietary code and data, enforce usage policies, and align AI usage with security, compliance, and internal standards without blocking developer velocity.",
+    icon: "bx:bxs-lock-alt",
+  },
+  {
+    title: "Developer Enablement & Handover",
+    subtitle: "No black boxes.",
+    description: "We document architectures, provide internal standards, and upskill teams so they can maintain, extend, and evolve AI systems independently after delivery.",
+    icon: "bx:bxs-graduation",
+  },
+  {
+    title: "From Delivery to Continuous Improvement",
+    subtitle: "AI systems are never \"done\".",
+    description: "We help teams set up evaluation pipelines, monitoring, and iteration loops enabling continuous improvement as models, tools, and requirements change.",
+    icon: "bx:bx-time-five",
+  },
+];
+---
+
+<Layout title="Developer Augmentation">
+  <Container>
+    <!-- Header Section -->
+    <Sectionhead>
+      <Fragment slot="title">Developer Augmentation Framework</Fragment>
+      <Fragment slot="desc">
+        Uncompromised AI for engineering teams
+      </Fragment>
+    </Sectionhead>
+
+    <!-- Main Description -->
+    <div class="flex flex-col gap-8 mx-auto max-w-4xl mt-16">
+      <div class="prose prose-lg max-w-none">
+        <h2 class="font-bold text-3xl text-gray-800">
+          What We Offer
+        </h2>
+        <p class="text-lg leading-relaxed text-slate-500">
+          Uncompromised AI for engineering teams. We help developers build, ship,
+          and operate AI-driven systems using production-grade tooling, clear
+          guardrails, and battle-tested architectures.
+        </p>
+      </div>
+
+      <!-- Capabilities List -->
+      <div class="space-y-6 mt-8">
+        {capabilities.map((capability) => (
+          <div class="bg-white border-2 border-gray-200 rounded-xl p-6 md:p-8 hover:border-blue-400 hover:shadow-lg transition-all">
+            <div class="flex items-start gap-4">
+              <div class="bg-blue-600 rounded-lg p-3 flex-shrink-0">
+                <Icon class="text-white w-6 h-6" name={capability.icon} />
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-bold text-gray-900 mb-1">
+                  {capability.title}
+                </h3>
+                <p class="text-blue-600 font-medium text-sm mb-3">
+                  {capability.subtitle}
+                </p>
+                <p class="text-slate-700 leading-relaxed">
+                  {capability.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Bottom CTA -->
+      <div class="bg-gradient-to-br from-blue-50 to-gray-50 rounded-2xl p-8 md:p-12 mt-12">
+        <div class="text-center">
+          <h3 class="text-3xl font-bold text-gray-900 mb-4">
+            Build production AI, not demos
+          </h3>
+          <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
+            Get your engineering team up to speed with AI tooling that's
+            secure, scalable, and ready for production.
+          </p>
+          <div class="flex gap-4 justify-center flex-wrap">
+            <Link href="/contact" class="inline-flex gap-2 items-center" style="background-color: rgb(37, 99, 235);">
+              <Icon class="text-white w-5 h-5" name="bx:bxs-paper-plane" />
+              Learn More
+            </Link>
+            <a
+              href="/contact"
+              class="inline-flex items-center gap-2 px-6 py-3 bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-50 rounded-lg font-medium transition">
+              <Icon class="w-5 h-5" name="bx:bx-phone" />
+              Request a Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Back to Products -->
+      <div class="text-center mt-8 pt-8 border-t border-gray-200">
+        <a
+          href="/products"
+          class="inline-flex items-center gap-2 text-gray-600 hover:text-blue-600 font-medium transition">
+          <Icon class="w-5 h-5" name="bx:bx-left-arrow-alt" />
+          Back to All Products
+        </a>
+      </div>
+    </div>
+  </Container>
+</Layout>

@@ -1,0 +1,90 @@
+---
+import Container from "@/components/container.astro";
+import Sectionhead from "@/components/sectionhead.astro";
+import Layout from "@/layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+import Link from "@/components/ui/link.astro";
+
+const products = [
+  {
+    id: "platform",
+    title: "AI Platform",
+    icon: "bx:bxs-server",
+    iconBg: "bg-emerald-600",
+    description: "Sovereign AI infrastructure that runs inside your walls. Deploy production-scale AI in weeks with complete data sovereignty.",
+    href: "/products/platform",
+  },
+  {
+    id: "augmentation",
+    title: "Developer Augmentation",
+    icon: "bx:bxs-rocket",
+    iconBg: "bg-blue-600",
+    description: "Uncompromised AI for engineering teams. Build, ship, and operate AI-driven systems using production-grade tooling and battle-tested architectures.",
+    href: "/products/augmentation",
+  },
+  {
+    id: "audit",
+    title: "Audit",
+    icon: "bx:bxs-shield-alt-2",
+    iconBg: "bg-purple-600",
+    description: "Understand, control, and secure AI across your organization. Comprehensive audits that expose blind spots before risks turn into liabilities.",
+    href: "/products/audit",
+  },
+];
+---
+
+<Layout title="Products">
+  <Container>
+    <!-- Header Section -->
+    <Sectionhead>
+      <Fragment slot="title">Our Products</Fragment>
+      <Fragment slot="desc">
+        Sovereign AI infrastructure built for enterprises that demand control
+      </Fragment>
+    </Sectionhead>
+
+    <!-- Products Grid -->
+    <div class="grid md:grid-cols-3 gap-8 mx-auto max-w-6xl mt-16">
+      {products.map((product) => (
+        <div class="group bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-emerald-400 hover:shadow-2xl transition-all duration-300">
+          <!-- Icon -->
+          <div class={`${product.iconBg} rounded-2xl p-4 w-16 h-16 flex items-center justify-center mb-6`}>
+            <Icon class="text-white w-8 h-8" name={product.icon} />
+          </div>
+
+          <!-- Title -->
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">
+            {product.title}
+          </h3>
+
+          <!-- Description -->
+          <p class="text-slate-600 leading-relaxed mb-6">
+            {product.description}
+          </p>
+
+          <!-- CTA Button -->
+          <a
+            href={product.href}
+            class="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-semibold group-hover:gap-3 transition-all">
+            Learn More
+            <Icon class="w-5 h-5" name="bx:bx-right-arrow-alt" />
+          </a>
+        </div>
+      ))}
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="text-center mt-20 pt-12 border-t border-gray-200">
+      <h3 class="text-2xl font-bold text-gray-900 mb-4">
+        Not sure which product fits your needs?
+      </h3>
+      <p class="text-lg text-slate-600 mb-6 max-w-2xl mx-auto">
+        Get in touch and we'll help you choose the right solution for your organization.
+      </p>
+      <Link href="/contact" class="inline-flex gap-2 items-center">
+        <Icon class="text-white w-5 h-5" name="bx:bxs-paper-plane" />
+        Contact Us
+      </Link>
+    </div>
+  </Container>
+</Layout>
