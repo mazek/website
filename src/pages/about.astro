@@ -2,6 +2,7 @@
 import Layout from "@/layouts/Layout.astro";
 import Container from "@/components/container.astro";
 import Sectionhead from "@/components/sectionhead.astro";
+import Newsletter from "@/components/newsletter.astro";
 ---
 
 <Layout title="About">
@@ -33,6 +34,12 @@ import Sectionhead from "@/components/sectionhead.astro";
       <p class="text-lg leading-relaxed text-slate-600 font-semibold">
         That's why we're building Bitropy.
       </p>
+
+      <p class="text-lg leading-relaxed text-slate-600 mt-8 text-center">
+        Want to join the Bitropy team? Check out the <a href="/jobs" class="text-emerald-600 hover:text-emerald-700 font-semibold underline">Jobs section</a>.
+      </p>
     </div>
   </Container>
+
+  <Newsletter />
 </Layout>
