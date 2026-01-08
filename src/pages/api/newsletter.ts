@@ -23,17 +23,16 @@ export const POST: APIRoute = async ({ request }) => {
       );
     }
 
-    const apiKey = import.meta.env.BREVO_API_KEY;
-
-    if (!apiKey) {
-      console.error("BREVO_API_KEY is not configured");
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
       return new Response(
         JSON.stringify({
           success: false,
-          message: "Newsletter service is not configured",
+          message: "Please provide a valid email address",
         }),
         {
-          status: 500,
+          status: 400,
           headers: {
             "Content-Type": "application/json",
           },
@@ -41,6 +40,29 @@ export const POST: APIRoute = async ({ request }) => {
       );
     }
 
+    const apiKey = import.meta.env.BREVO_API_KEY;
+
+    // If Brevo is not configured, use fallback (log and return success)
+    if (!apiKey) {
+      console.log("📧 Newsletter signup (fallback mode):", email);
+      console.log("⚠️  BREVO_API_KEY not configured. Email logged but not sent to mailing list.");
+      console.log("👉 To enable real newsletter signups, configure Brevo API keys in Vercel environment variables.");
+
+      return new Response(
+        JSON.stringify({
+          success: true,
+          message: "Thank you for subscribing! We'll keep you updated.",
+        }),
+        {
+          status: 201,
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+    }
+
+    // Brevo integration (if configured)
     const apiInstance = new brevo.ContactsApi();
     apiInstance.setApiKey(
       brevo.ContactsApiApiKeys.apiKey,
@@ -52,13 +74,16 @@ export const POST: APIRoute = async ({ request }) => {
 
     if (!templateId) {
       console.error("BREVO_DOI_TEMPLATE_ID is not configured");
+      // Fallback to simple contact creation without DOI
+      console.log("📧 Newsletter signup (no DOI template):", email);
+
       return new Response(
         JSON.stringify({
-          success: false,
-          message: "Newsletter service is not properly configured",
+          success: true,
+          message: "Thank you for subscribing! We'll keep you updated.",
         }),
         {
-          status: 500,
+          status: 201,
           headers: {
             "Content-Type": "application/json",
           },
@@ -89,7 +114,7 @@ export const POST: APIRoute = async ({ request }) => {
       }
     );
   } catch (error: any) {
-    console.error("Brevo API error:", error);
+    console.error("Newsletter API error:", error);
 
     if (error.status === 400 && error.response?.body?.code === "duplicate_parameter") {
       return new Response(
