@@ -1,23 +1,11 @@
 ---
-import heroImage from "@/assets/hero.png";
 import Link from "@/components/ui/link.astro";
 import { Icon } from "astro-icon/components";
-import { Picture } from "astro:assets";
 ---
 
 <main
-  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
-  <div class="py-6 md:order-1 hidden md:block">
-    <Picture
-      src={heroImage}
-      alt="Astronaut in the air"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 800px) 100vw, 620px"
-      loading="eager"
-      format="avif"
-    />
-  </div>
-  <div>
+  class="grid place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+  <div class="max-w-4xl mx-auto text-center">
     <h1
       class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
       Your AI. Your Data.
@@ -41,14 +29,14 @@ import { Picture } from "astro:assets";
         </svg>
       </span>
     </h1>
-    <p class="text-lg mt-4 text-slate-600 max-w-xl">
+    <p class="text-lg mt-4 text-slate-600 max-w-3xl mx-auto">
       In a world racing toward automation, trust has become the new currency.
       Bitropy was built for enterprises that demand both intelligence and
       independence. We provide sovereign AI infrastructure a modular platform
       that handles inference, governance, and secure data integrations so your
       teams can innovate freely, without compromise.
     </p>
-    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+    <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
       <Link href="/contact" class="flex gap-1 items-center justify-center">
         <Icon class="text-white w-5 h-5" name="bx:bxs-paper-plane" />
         Get Started
