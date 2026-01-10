@@ -17,12 +17,12 @@ const solutions = [
 ];
 ---
 
-<section class="py-24 bg-dark-bg relative">
+<section class="py-24 bg-light-bg relative">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Header -->
     <div class="text-center mb-16">
       <h2 class="text-4xl md:text-5xl font-bold mb-4">Solutions</h2>
-      <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-12">
+      <p class="text-xl text-text-secondary max-w-2xl mx-auto mb-12">
         Tailored AI solutions for your industry—built on sovereign infrastructure
       </p>
 
@@ -30,13 +30,13 @@ const solutions = [
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a
           href="/v2/products"
-          class="inline-flex items-center gap-2 px-8 py-3 bg-brand hover:bg-brand-dark text-white rounded-lg font-semibold transition-all shadow-lg shadow-[#A898E9]/20">
+          class="inline-flex items-center gap-2 px-8 py-3 bg-brand hover:bg-brand-dark text-text-primary rounded-lg font-semibold transition-all shadow-lg shadow-[#A898E9]/20">
           <Icon class="w-5 h-5" name="bx:bx-package" />
           View Platform
         </a>
         <a
           href="/v2/contact"
-          class="inline-flex items-center gap-2 px-8 py-3 bg-transparent border-2 border-brand/30 hover:border-brand text-white rounded-lg font-semibold transition-all">
+          class="inline-flex items-center gap-2 px-8 py-3 bg-transparent border-2 border-brand/30 hover:border-brand text-text-primary rounded-lg font-semibold transition-all">
           <Icon class="w-5 h-5" name="bx:bx-calendar" />
           Schedule a Demonstration
         </a>
@@ -47,12 +47,12 @@ const solutions = [
     <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
       {
         solutions.map((solution) => (
-          <div class="group relative bg-dark-accent/50 hover:bg-dark-accent border border-brand/10 hover:border-brand/30 rounded-lg p-4 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer">
+          <div class="group relative bg-light-accent/50 hover:bg-light-accent border border-brand/10 hover:border-brand/30 rounded-lg p-4 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer">
             <div class="flex items-center gap-3">
               <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-brand/10 group-hover:bg-brand/20 flex items-center justify-center transition-colors">
                 <Icon class="w-5 h-5 text-brand" name={solution.icon} />
               </div>
-              <span class="text-gray-300 group-hover:text-white transition-colors font-medium">
+              <span class="text-text-secondary group-hover:text-text-primary transition-colors font-medium">
                 {solution.name}
               </span>
             </div>
@@ -66,7 +66,7 @@ const solutions = [
 
     <!-- Additional Info -->
     <div class="mt-16 text-center">
-      <p class="text-gray-400">
+      <p class="text-text-secondary">
         Don't see your use case?
         <a href="/v2/contact" class="text-brand hover:text-brand-dark font-semibold ml-1 underline">
           Contact us

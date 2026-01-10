@@ -2,13 +2,7 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-  <!-- Animated background with particles -->
-  <div class="absolute inset-0 bg-gradient-to-b from-dark-bg via-dark-accent to-dark-bg">
-    <div class="stars"></div>
-    <div class="stars2"></div>
-    <div class="stars3"></div>
-  </div>
+<section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-light-bg via-light-accent to-light-bg">
 
   <!-- Content -->
   <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -23,7 +17,7 @@ import { Icon } from "astro-icon/components";
       </span>
     </h1>
 
-    <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
+    <p class="text-xl md:text-2xl text-text-secondary mb-10 max-w-3xl mx-auto leading-relaxed">
       Deploy a Kubernetes-based AI platform, completely on-premises, and stay compliant
       with GDPR, BaFin, and the EU AI Act from day one.
     </p>
@@ -31,13 +25,13 @@ import { Icon } from "astro-icon/components";
     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
       <a
         href="/v2/contact"
-        class="inline-flex items-center gap-2 px-8 py-4 bg-brand hover:bg-brand-dark text-white rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg shadow-[#A898E9]/20">
+        class="inline-flex items-center gap-2 px-8 py-4 bg-brand hover:bg-brand-dark text-text-primary rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg shadow-[#A898E9]/20">
         <Icon class="w-5 h-5" name="bx:bx-rocket" />
         Start Free Trial
       </a>
       <a
         href="#demo"
-        class="inline-flex items-center gap-2 px-8 py-4 bg-transparent border-2 border-brand/30 hover:border-brand text-white rounded-lg font-semibold transition-all">
+        class="inline-flex items-center gap-2 px-8 py-4 bg-transparent border-2 border-brand/30 hover:border-brand text-text-primary rounded-lg font-semibold transition-all">
         <Icon class="w-5 h-5" name="bx:bx-play-circle" />
         Watch Demo
       </a>
@@ -47,71 +41,20 @@ import { Icon } from "astro-icon/components";
     <div class="mt-16 flex flex-wrap justify-center items-center gap-8 opacity-60">
       <div class="flex items-center gap-2">
         <Icon class="w-5 h-5 text-brand" name="bx:bx-check-shield" />
-        <span class="text-sm text-gray-400">GDPR Compliant</span>
+        <span class="text-sm text-text-secondary">GDPR Compliant</span>
       </div>
       <div class="flex items-center gap-2">
         <Icon class="w-5 h-5 text-brand" name="bx:bx-lock-alt" />
-        <span class="text-sm text-gray-400">On-Premises</span>
+        <span class="text-sm text-text-secondary">On-Premises</span>
       </div>
       <div class="flex items-center gap-2">
         <Icon class="w-5 h-5 text-brand" name="bx:bx-rocket" />
-        <span class="text-sm text-gray-400">Deploy in 2 Weeks</span>
+        <span class="text-sm text-text-secondary">Deploy in 2 Weeks</span>
       </div>
     </div>
   </div>
 
   <!-- Gradient overlay at bottom -->
-  <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-dark-bg to-transparent"></div>
+  <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-light-bg to-transparent"></div>
 </section>
 
-<style>
-  .stars,
-  .stars2,
-  .stars3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-
-  .stars {
-    background: radial-gradient(2px 2px at 20px 30px, rgba(168, 152, 233, 0.4), rgba(0, 0, 0, 0)),
-      radial-gradient(2px 2px at 60px 70px, rgba(168, 152, 233, 0.3), rgba(0, 0, 0, 0)),
-      radial-gradient(2px 2px at 50px 160px, rgba(168, 152, 233, 0.3), rgba(0, 0, 0, 0)),
-      radial-gradient(2px 2px at 130px 80px, rgba(168, 152, 233, 0.4), rgba(0, 0, 0, 0)),
-      radial-gradient(2px 2px at 140px 150px, rgba(168, 152, 233, 0.3), rgba(0, 0, 0, 0));
-    background-size: 200px 200px;
-    background-position: 0 0;
-    animation: animateStars 50s linear infinite;
-  }
-
-  .stars2 {
-    background: radial-gradient(1px 1px at 100px 50px, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0)),
-      radial-gradient(1px 1px at 150px 180px, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0)),
-      radial-gradient(1px 1px at 50px 140px, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0));
-    background-size: 250px 250px;
-    background-position: 0 0;
-    animation: animateStars 100s linear infinite;
-  }
-
-  .stars3 {
-    background: radial-gradient(1px 1px at 75px 125px, rgba(168, 152, 233, 0.2), rgba(0, 0, 0, 0)),
-      radial-gradient(1px 1px at 175px 75px, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
-    background-size: 300px 300px;
-    background-position: 0 0;
-    animation: animateStars 150s linear infinite;
-  }
-
-  @keyframes animateStars {
-    from {
-      transform: translateY(0px);
-    }
-    to {
-      transform: translateY(-2000px);
-    }
-  }
-</style>

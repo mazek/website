@@ -13,9 +13,11 @@
   --color-brand-dark: #8B7BC9;
   --color-brand-light: #F3F1FC;
 
-  /* Dark Theme Colors */
-  --color-dark-bg: #0a0e1a;
-  --color-dark-accent: #1a1f3a;
+  /* Light Theme Colors for v2 */
+  --color-light-bg: #ffffff;
+  --color-light-accent: #f8f9fa;
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #64748b;
 }
 
 /*
