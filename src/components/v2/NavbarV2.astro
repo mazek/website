@@ -1,0 +1,123 @@
+---
+import { Icon } from "astro-icon/components";
+
+const menuitems = [
+  {
+    title: "Products",
+    path: "/v2/products",
+  },
+  {
+    title: "About Us",
+    path: "/v2/about",
+  },
+  {
+    title: "Jobs",
+    path: "/v2/jobs",
+  },
+  {
+    title: "Contact",
+    path: "/v2/contact",
+  },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-50 border-b border-[#A898E9]/10 backdrop-blur-lg bg-[#0a0e1a]/80">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo -->
+      <a
+        href="/v2"
+        class="flex items-center gap-2 transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#A898E9] focus-visible:outline-none rounded-lg">
+        <img src="/Bitropy-w.png" alt="Bitropy" class="h-10" />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8">
+        {
+          menuitems.map((item) => (
+            <a
+              href={item.path}
+              class:list={[
+                "text-base font-medium transition-colors hover:text-[#A898E9]",
+                currentPath === item.path || (item.path !== "/v2" && currentPath.startsWith(item.path))
+                  ? "text-[#A898E9]"
+                  : "text-gray-300",
+              ]}>
+              {item.title}
+            </a>
+          ))
+        }
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="hidden md:flex items-center gap-4">
+        <a
+          href="https://www.linkedin.com/company/bitropy/"
+          target="_blank"
+          rel="noopener"
+          class="text-gray-300 hover:text-[#A898E9] transition">
+          <Icon class="w-5 h-5" name="bx:bxl-linkedin" />
+        </a>
+        <a
+          href="https://github.com/orgs/Bitropy/"
+          target="_blank"
+          rel="noopener"
+          class="text-gray-300 hover:text-[#A898E9] transition">
+          <Icon class="w-5 h-5" name="bx:bxl-github" />
+        </a>
+        <a
+          href="/v2/contact"
+          class="px-6 py-2.5 bg-[#A898E9] hover:bg-[#8B7BC9] text-white rounded-lg font-semibold transition-all shadow-lg shadow-[#A898E9]/20">
+          Get Started
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button
+        id="mobile-menu-button"
+        class="md:hidden text-gray-300 hover:text-white transition">
+        <Icon class="w-6 h-6" name="bx:bx-menu" />
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-[#A898E9]/10 bg-[#0a0e1a]">
+    <div class="px-4 py-6 space-y-4">
+      {
+        menuitems.map((item) => (
+          <a
+            href={item.path}
+            class:list={[
+              "block px-4 py-2 rounded-lg text-base font-medium transition-colors",
+              currentPath === item.path || (item.path !== "/v2" && currentPath.startsWith(item.path))
+                ? "bg-[#A898E9]/20 text-[#A898E9]"
+                : "text-gray-300 hover:bg-[#A898E9]/10 hover:text-[#A898E9]",
+            ]}>
+            {item.title}
+          </a>
+        ))
+      }
+      <a
+        href="/v2/contact"
+        class="block px-4 py-2.5 bg-[#A898E9] hover:bg-[#8B7BC9] text-white text-center rounded-lg font-semibold transition-all shadow-lg shadow-[#A898E9]/20">
+        Get Started
+      </a>
+    </div>
+  </div>
+</header>
+
+<script is:inline>
+  document.addEventListener("astro:page-load", () => {
+    const button = document.getElementById("mobile-menu-button");
+    const menu = document.getElementById("mobile-menu");
+
+    if (button && menu) {
+      button.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    }
+  });
+</script>

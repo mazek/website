@@ -1,7 +1,7 @@
 ---
 import { SEO } from "astro-seo";
-import Footer from "@/components/footer.astro";
-import Navbar from "@/components/navbar/navbar.astro";
+import FooterV2 from "@/components/v2/FooterV2.astro";
+import NavbarV2 from "@/components/v2/NavbarV2.astro";
 import "@fontsource-variable/inter/index.css";
 
 export interface Props {
@@ -49,9 +49,9 @@ const makeTitle = title ? title + " | " + "Bitropy" : "Bitropy - Sovereign AI In
     />
   </head>
   <body class="bg-[#0a0e1a] text-white">
-    <Navbar />
+    <NavbarV2 />
     <slot />
-    <Footer />
+    <FooterV2 margin={true} />
     <style is:global>
       /* Improve Page speed */
       /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
