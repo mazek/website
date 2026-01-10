@@ -1,0 +1,70 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<section class="py-24 bg-gradient-to-b from-[#1a1f3a] to-[#0a0e1a] relative overflow-hidden">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+    <h2 class="text-4xl md:text-5xl font-bold mb-6">
+      Ready to Revolutionize Your Workflow?
+    </h2>
+    <p class="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
+      Join the forward-thinking companies deploying sovereign AI infrastructure. Get started in
+      under 2 weeks with full compliance and data sovereignty.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="/v2/contact"
+        class="inline-flex items-center gap-2 px-8 py-4 bg-[#A898E9] hover:bg-[#8B7BC9] text-white rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg shadow-[#A898E9]/30">
+        <Icon class="w-5 h-5" name="bx:bx-rocket" />
+        Contact Sales
+      </a>
+      <a
+        href="/v2/products"
+        class="inline-flex items-center gap-2 px-8 py-4 bg-transparent border-2 border-[#A898E9]/30 hover:border-[#A898E9] text-white rounded-lg font-semibold transition-all">
+        <Icon class="w-5 h-5" name="bx:bx-package" />
+        Request Documentation
+      </a>
+    </div>
+
+    <!-- Trust indicators -->
+    <div class="mt-12 flex flex-wrap justify-center gap-8 text-gray-400 text-sm">
+      <div class="flex items-center gap-2">
+        <Icon class="w-4 h-4 text-[#A898E9]" name="bx:bx-check" />
+        <span>No credit card required</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <Icon class="w-4 h-4 text-[#A898E9]" name="bx:bx-check" />
+        <span>Deploy in 2 weeks</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <Icon class="w-4 h-4 text-[#A898E9]" name="bx:bx-check" />
+        <span>Full compliance</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Animated background -->
+  <div class="absolute inset-0 overflow-hidden -z-10">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#A898E9]/10 rounded-full blur-3xl animate-pulse-slow">
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes pulse-slow {
+    0%,
+    100% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.1);
+    }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 4s ease-in-out infinite;
+  }
+</style>

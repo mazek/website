@@ -1,0 +1,82 @@
+---
+import { Icon } from "astro-icon/components";
+
+const solutions = [
+  { name: "Model Deployment", icon: "bx:bxs-rocket" },
+  { name: "Healthcare AI", icon: "bx:bxs-heart" },
+  { name: "Document Processing", icon: "bx:bxs-file-doc" },
+  { name: "Financial Tracking", icon: "bx:bxs-dollar-circle" },
+  { name: "Compliance Audit", icon: "bx:bxs-check-shield" },
+  { name: "KYC & AML", icon: "bx:bxs-user-check" },
+  { name: "Predictive Analytics", icon: "bx:bxs-bar-chart-alt-2" },
+  { name: "Data Governance", icon: "bx:bxs-data" },
+  { name: "AI Orchestration", icon: "bx:bxs-brain" },
+  { name: "Pharma AI", icon: "bx:bxs-capsule" },
+  { name: "Risk Management", icon: "bx:bxs-shield" },
+  { name: "Banking AI", icon: "bx:bxs-bank" },
+];
+---
+
+<section class="py-24 bg-[#0a0e1a] relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">Solutions</h2>
+      <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-12">
+        Tailored AI solutions for your industry—built on sovereign infrastructure
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/v2/products"
+          class="inline-flex items-center gap-2 px-8 py-3 bg-[#A898E9] hover:bg-[#8B7BC9] text-white rounded-lg font-semibold transition-all shadow-lg shadow-[#A898E9]/20">
+          <Icon class="w-5 h-5" name="bx:bx-package" />
+          View Platform
+        </a>
+        <a
+          href="/v2/contact"
+          class="inline-flex items-center gap-2 px-8 py-3 bg-transparent border-2 border-[#A898E9]/30 hover:border-[#A898E9] text-white rounded-lg font-semibold transition-all">
+          <Icon class="w-5 h-5" name="bx:bx-calendar" />
+          Schedule a Demonstration
+        </a>
+      </div>
+    </div>
+
+    <!-- Solutions Grid -->
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+      {
+        solutions.map((solution) => (
+          <div class="group relative bg-[#1a1f3a]/50 hover:bg-[#1a1f3a] border border-[#A898E9]/10 hover:border-[#A898E9]/30 rounded-lg p-4 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer">
+            <div class="flex items-center gap-3">
+              <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-[#A898E9]/10 group-hover:bg-[#A898E9]/20 flex items-center justify-center transition-colors">
+                <Icon class="w-5 h-5 text-[#A898E9]" name={solution.icon} />
+              </div>
+              <span class="text-gray-300 group-hover:text-white transition-colors font-medium">
+                {solution.name}
+              </span>
+            </div>
+            <!-- Hover glow effect -->
+            <div class="absolute inset-0 rounded-lg bg-[#A898E9]/5 opacity-0 group-hover:opacity-100 transition-opacity -z-10 blur-xl">
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- Additional Info -->
+    <div class="mt-16 text-center">
+      <p class="text-gray-400">
+        Don't see your use case?
+        <a href="/v2/contact" class="text-[#A898E9] hover:text-[#8B7BC9] font-semibold ml-1 underline">
+          Contact us
+        </a>
+        for custom solutions
+      </p>
+    </div>
+  </div>
+
+  <!-- Background decoration -->
+  <div class="absolute top-0 left-1/4 w-96 h-96 bg-[#A898E9]/5 rounded-full blur-3xl -z-10"></div>
+  <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-[#8B7BC9]/5 rounded-full blur-3xl -z-10"></div>
+</section>

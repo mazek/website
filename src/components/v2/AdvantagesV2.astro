@@ -1,0 +1,174 @@
+---
+import { Icon } from "astro-icon/components";
+
+const advantages = [
+  {
+    title: "Removes human-level orchestration",
+    description:
+      "Bitropy eliminates manual coordination of AI workloads. Deploy models, manage inference, and scale infrastructure automatically—without constant human oversight.",
+    icon: "bx:bxs-bot",
+  },
+  {
+    title: "High-Performance Data Movement",
+    description:
+      "Move data securely between on-premises storage, AI models, and enterprise systems. Optimized for regulated industries where data residency isn't optional.",
+    icon: "bx:bxs-data",
+  },
+  {
+    title: "Best-New Process & Workflow Automation",
+    description:
+      "Automate AI-driven workflows from data ingestion to model inference and output delivery. Build pipelines that run autonomously, with full audit trails and compliance built in.",
+    icon: "bx:bxs-cog",
+  },
+  {
+    title: "Seamless Enterprise Integration",
+    description:
+      "Connect Bitropy to existing enterprise systems via standardized protocols. Works with your current tech stack—no rip-and-replace required.",
+    icon: "bx:bxs-plug",
+  },
+];
+---
+
+<section class="py-24 bg-[#0a0e1a] relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <div class="inline-block px-4 py-2 mb-4 rounded-full bg-[#A898E9]/10 border border-[#A898E9]/20">
+        <span class="text-[#A898E9] text-sm font-medium uppercase tracking-wider">Intelligent Solutions</span>
+      </div>
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">The Bitropy Advantages</h2>
+      <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+        Purpose-built for enterprises that need AI without compromising on sovereignty, security, or speed
+      </p>
+    </div>
+
+    <!-- Content Grid -->
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Left: Advantages List -->
+      <div class="space-y-8">
+        {
+          advantages.map((advantage) => (
+            <div class="group hover:translate-x-2 transition-all duration-300">
+              <div class="flex gap-4">
+                <div class="flex-shrink-0">
+                  <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-[#A898E9] to-[#8B7BC9] flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Icon class="w-6 h-6 text-white" name={advantage.icon} />
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold mb-2 text-white">{advantage.title}</h3>
+                  <p class="text-gray-400 leading-relaxed">{advantage.description}</p>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+
+      <!-- Right: Ecosystem Diagram -->
+      <div class="relative">
+        <div class="aspect-square relative">
+          <!-- Central Hub -->
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full bg-gradient-to-br from-[#A898E9] to-[#8B7BC9] flex items-center justify-center shadow-2xl shadow-[#A898E9]/30 animate-pulse-slow">
+            <Icon class="w-16 h-16 text-white" name="bx:bxs-brain" />
+          </div>
+
+          <!-- Orbiting Elements -->
+          <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <div class="w-20 h-20 rounded-lg bg-[#1a1f3a] border border-[#A898E9]/30 flex items-center justify-center shadow-lg">
+              <Icon class="w-10 h-10 text-[#A898E9]" name="bx:bxs-bar-chart-alt-2" />
+            </div>
+            <p class="text-sm text-gray-400 text-center mt-2 whitespace-nowrap">Predictive Analytics</p>
+          </div>
+
+          <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
+            <div class="w-20 h-20 rounded-lg bg-[#1a1f3a] border border-[#A898E9]/30 flex items-center justify-center shadow-lg">
+              <Icon class="w-10 h-10 text-[#A898E9]" name="bx:bxs-server" />
+            </div>
+            <p class="text-sm text-gray-400 text-center mt-2 whitespace-nowrap">Data Orchestrator</p>
+          </div>
+
+          <div class="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2">
+            <div class="w-20 h-20 rounded-lg bg-[#1a1f3a] border border-[#A898E9]/30 flex items-center justify-center shadow-lg">
+              <Icon class="w-10 h-10 text-[#A898E9]" name="bx:bxs-cog" />
+            </div>
+            <p class="text-sm text-gray-400 text-center mt-2 whitespace-nowrap">Automation</p>
+          </div>
+
+          <div class="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2">
+            <div class="w-20 h-20 rounded-lg bg-[#1a1f3a] border border-[#A898E9]/30 flex items-center justify-center shadow-lg">
+              <Icon class="w-10 h-10 text-[#A898E9]" name="bx:bxs-shield" />
+            </div>
+            <p class="text-sm text-gray-400 text-center mt-2 whitespace-nowrap">Task Resolution</p>
+          </div>
+
+          <!-- Connecting Lines -->
+          <svg class="absolute inset-0 w-full h-full" style="filter: blur(1px);">
+            <line
+              x1="50%"
+              y1="50%"
+              x2="50%"
+              y2="10%"
+              stroke="#A898E9"
+              stroke-width="1"
+              opacity="0.3"
+              stroke-dasharray="5,5">
+            </line>
+            <line
+              x1="50%"
+              y1="50%"
+              x2="50%"
+              y2="90%"
+              stroke="#A898E9"
+              stroke-width="1"
+              opacity="0.3"
+              stroke-dasharray="5,5">
+            </line>
+            <line
+              x1="50%"
+              y1="50%"
+              x2="90%"
+              y2="50%"
+              stroke="#A898E9"
+              stroke-width="1"
+              opacity="0.3"
+              stroke-dasharray="5,5">
+            </line>
+            <line
+              x1="50%"
+              y1="50%"
+              x2="10%"
+              y2="50%"
+              stroke="#A898E9"
+              stroke-width="1"
+              opacity="0.3"
+              stroke-dasharray="5,5">
+            </line>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background glow -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#A898E9]/5 rounded-full blur-3xl -z-10">
+  </div>
+</section>
+
+<style>
+  @keyframes pulse-slow {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 3s ease-in-out infinite;
+  }
+</style>

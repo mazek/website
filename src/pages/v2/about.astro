@@ -1,0 +1,142 @@
+---
+import LayoutV2 from "@/layouts/LayoutV2.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<LayoutV2 title="About Us">
+  <!-- Hero Section -->
+  <section class="relative py-24 bg-gradient-to-b from-[#0a0e1a] via-[#1a1f3a] to-[#0a0e1a] overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div class="inline-block px-4 py-2 mb-6 rounded-full bg-[#A898E9]/10 border border-[#A898E9]/20">
+        <span class="text-[#A898E9] text-sm font-medium uppercase tracking-wider">Who We Are</span>
+      </div>
+
+      <h1 class="text-5xl md:text-6xl font-bold mb-6">
+        The Team
+      </h1>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+        Experience across enterprise software, AI engineering, security, and compliance.
+      </p>
+    </div>
+
+    <!-- Background decoration -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#A898E9]/5 rounded-full blur-3xl -z-10">
+    </div>
+  </section>
+
+  <!-- Team Story -->
+  <section class="py-24 bg-[#0a0e1a]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-6 text-lg text-gray-300 leading-relaxed">
+        <p>
+          Bitropy is built by professionals with deep experience across enterprise software, AI engineering,
+          security, and compliance.
+        </p>
+        <p>
+          We've spent years working with complex, regulated environments—helping organizations scale technology
+          without losing control, transparency, or trust.
+        </p>
+        <p>
+          Our team understands AI from both sides: how leaders think about risk, cost, and accountability—and how
+          engineers build, deploy, and operate systems in production.
+        </p>
+        <p>
+          We've seen firsthand where AI adoption breaks down: fragmented tooling, missing guardrails, unclear
+          ownership, rising costs, and growing regulatory pressure.
+        </p>
+        <p>
+          That experience shapes everything we build. Bitropy is designed by people who have operated real systems,
+          supported real teams, and solved real problems—not just experimented with models.
+        </p>
+        <p>
+          We believe enterprises don't need more AI tools. They need a foundation they can trust.
+        </p>
+        <p class="font-semibold text-white text-xl mt-8">
+          That's why we're building Bitropy.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values/Why Section -->
+  <section class="py-24 bg-gradient-to-b from-[#0a0e1a] to-[#1a1f3a]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Why Bitropy Exists</h2>
+        <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+          Built for enterprises that refuse to compromise on sovereignty, security, or speed
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="relative group">
+          <div class="h-full bg-[#1a1f3a]/50 border border-[#A898E9]/20 rounded-2xl p-8 hover:border-[#A898E9]/40 transition-all">
+            <div class="w-12 h-12 rounded-lg bg-[#A898E9]/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <Icon class="w-6 h-6 text-[#A898E9]" name="bx:bxs-lock-alt" />
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-white">Sovereignty First</h3>
+            <p class="text-gray-300 leading-relaxed">
+              Your data never leaves your infrastructure. True sovereignty isn't a feature—it's the foundation.
+            </p>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <div class="h-full bg-[#1a1f3a]/50 border border-[#A898E9]/20 rounded-2xl p-8 hover:border-[#A898E9]/40 transition-all">
+            <div class="w-12 h-12 rounded-lg bg-[#A898E9]/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <Icon class="w-6 h-6 text-[#A898E9]" name="bx:bxs-rocket" />
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-white">Speed to Production</h3>
+            <p class="text-gray-300 leading-relaxed">
+              Deploy in weeks, not months. No endless consulting cycles. Just production-ready infrastructure.
+            </p>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <div class="h-full bg-[#1a1f3a]/50 border border-[#A898E9]/20 rounded-2xl p-8 hover:border-[#A898E9]/40 transition-all">
+            <div class="w-12 h-12 rounded-lg bg-[#A898E9]/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <Icon class="w-6 h-6 text-[#A898E9]" name="bx:bxs-check-shield" />
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-white">Compliance Ready</h3>
+            <p class="text-gray-300 leading-relaxed">
+              Built for GDPR, BaFin, and EU AI Act from day one. Compliance isn't bolt-on—it's built-in.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Jobs CTA -->
+  <section class="py-24 bg-[#0a0e1a]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Join the Team</h2>
+      <p class="text-lg text-gray-300 mb-8">
+        Want to join the Bitropy team? Check out the
+        <a href="/v2/jobs" class="text-[#A898E9] hover:text-[#8B7BC9] font-semibold underline">
+          Jobs section
+        </a>.
+      </p>
+
+      <!-- Newsletter CTA -->
+      <div class="mt-16 p-8 bg-[#1a1f3a]/50 border border-[#A898E9]/20 rounded-2xl">
+        <h3 class="text-2xl font-bold mb-4">Stay Updated</h3>
+        <p class="text-gray-300 mb-6">
+          Subscribe to our newsletter for the latest insights on sovereign AI, digital transformation,
+          and enterprise technology.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="flex-1 px-4 py-3 bg-[#0a0e1a] border border-[#A898E9]/30 rounded-lg text-white placeholder-gray-500 focus:border-[#A898E9] focus:outline-none focus:ring-2 focus:ring-[#A898E9]/20" />
+          <button
+            class="px-6 py-3 bg-[#A898E9] hover:bg-[#8B7BC9] text-white rounded-lg font-semibold transition-all shadow-lg shadow-[#A898E9]/20">
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</LayoutV2>

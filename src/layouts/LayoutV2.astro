@@ -1,0 +1,63 @@
+---
+import { SEO } from "astro-seo";
+import Footer from "@/components/footer.astro";
+import Navbar from "@/components/navbar/navbar.astro";
+import "@fontsource-variable/inter/index.css";
+
+export interface Props {
+  title: string;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+
+const resolvedImageWithDomain = new URL("/opengraph.jpg", Astro.site).toString();
+
+const { title } = Astro.props;
+
+const makeTitle = title ? title + " | " + "Bitropy" : "Bitropy - Sovereign AI Infrastructure";
+---
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
+    <SEO
+      title={makeTitle}
+      description="Sovereign AI infrastructure that runs inside your walls. Deploy production-scale AI in weeks with complete data sovereignty."
+      canonical={canonicalURL}
+      twitter={{
+        creator: "@bitropy",
+        site: "@bitropy",
+        card: "summary_large_image",
+      }}
+      openGraph={{
+        basic: {
+          url: canonicalURL,
+          type: "website",
+          title: `Bitropy - Sovereign AI Infrastructure`,
+          image: resolvedImageWithDomain,
+        },
+        image: {
+          alt: "Bitropy Screenshot",
+        },
+      }}
+    />
+  </head>
+  <body class="bg-[#0a0e1a] text-white">
+    <Navbar />
+    <slot />
+    <Footer />
+    <style is:global>
+      /* Improve Page speed */
+      /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
+      img {
+        content-visibility: auto;
+      }
+    </style>
+  </body>
+</html>
