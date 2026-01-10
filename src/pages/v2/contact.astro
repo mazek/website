@@ -5,10 +5,10 @@ import { Icon } from "astro-icon/components";
 
 <LayoutV2 title="Contact">
   <!-- Hero Section -->
-  <section class="relative py-24 bg-gradient-to-b from-[#0a0e1a] via-[#1a1f3a] to-[#0a0e1a] overflow-hidden">
+  <section class="relative py-24 bg-gradient-to-b from-dark-bg via-dark-accent to-dark-bg overflow-hidden">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-      <div class="inline-block px-4 py-2 mb-6 rounded-full bg-[#A898E9]/10 border border-[#A898E9]/20">
-        <span class="text-[#A898E9] text-sm font-medium uppercase tracking-wider">Get in Touch</span>
+      <div class="inline-block px-4 py-2 mb-6 rounded-full bg-brand/10 border border-brand/20">
+        <span class="text-brand text-sm font-medium uppercase tracking-wider">Get in Touch</span>
       </div>
 
       <h1 class="text-5xl md:text-6xl font-bold mb-6">Contact Sales</h1>
@@ -18,12 +18,12 @@ import { Icon } from "astro-icon/components";
     </div>
 
     <!-- Background decoration -->
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#A898E9]/5 rounded-full blur-3xl -z-10">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand/5 rounded-full blur-3xl -z-10">
     </div>
   </section>
 
   <!-- Contact Form Section -->
-  <section class="py-24 bg-[#0a0e1a]">
+  <section class="py-24 bg-dark-bg">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-2 gap-12">
         <!-- Left: Contact Info -->
@@ -37,24 +37,24 @@ import { Icon } from "astro-icon/components";
           <!-- Contact Details -->
           <div class="space-y-4">
             <div class="flex items-center gap-3 text-gray-300">
-              <div class="w-10 h-10 rounded-lg bg-[#A898E9]/20 flex items-center justify-center">
-                <Icon class="w-5 h-5 text-[#A898E9]" name="bx:bx-envelope" />
+              <div class="w-10 h-10 rounded-lg bg-brand/20 flex items-center justify-center">
+                <Icon class="w-5 h-5 text-brand" name="bx:bx-envelope" />
               </div>
-              <a href="mailto:contact@bitropy.io" class="hover:text-[#A898E9] transition-colors">
+              <a href="mailto:contact@bitropy.io" class="hover:text-brand transition-colors">
                 contact@bitropy.io
               </a>
             </div>
 
             <div class="flex items-center gap-3 text-gray-300">
-              <div class="w-10 h-10 rounded-lg bg-[#A898E9]/20 flex items-center justify-center">
-                <Icon class="w-5 h-5 text-[#A898E9]" name="bx:bx-map" />
+              <div class="w-10 h-10 rounded-lg bg-brand/20 flex items-center justify-center">
+                <Icon class="w-5 h-5 text-brand" name="bx:bx-map" />
               </div>
               <span>Wrocław, Poland & Remote</span>
             </div>
 
             <div class="flex items-center gap-3 text-gray-300">
-              <div class="w-10 h-10 rounded-lg bg-[#A898E9]/20 flex items-center justify-center">
-                <Icon class="w-5 h-5 text-[#A898E9]" name="bx:bx-time" />
+              <div class="w-10 h-10 rounded-lg bg-brand/20 flex items-center justify-center">
+                <Icon class="w-5 h-5 text-brand" name="bx:bx-time" />
               </div>
               <span>Monday - Friday, 9:00 - 17:00 CET</span>
             </div>
@@ -66,21 +66,21 @@ import { Icon } from "astro-icon/components";
               href="https://www.linkedin.com/company/bitropy/"
               target="_blank"
               rel="noopener"
-              class="w-12 h-12 rounded-lg bg-[#A898E9]/10 hover:bg-[#A898E9]/20 flex items-center justify-center transition-all">
-              <Icon class="w-6 h-6 text-[#A898E9]" name="bx:bxl-linkedin" />
+              class="w-12 h-12 rounded-lg bg-brand/10 hover:bg-brand/20 flex items-center justify-center transition-all">
+              <Icon class="w-6 h-6 text-brand" name="bx:bxl-linkedin" />
             </a>
             <a
               href="https://github.com/orgs/Bitropy/"
               target="_blank"
               rel="noopener"
-              class="w-12 h-12 rounded-lg bg-[#A898E9]/10 hover:bg-[#A898E9]/20 flex items-center justify-center transition-all">
-              <Icon class="w-6 h-6 text-[#A898E9]" name="bx:bxl-github" />
+              class="w-12 h-12 rounded-lg bg-brand/10 hover:bg-brand/20 flex items-center justify-center transition-all">
+              <Icon class="w-6 h-6 text-brand" name="bx:bxl-github" />
             </a>
           </div>
         </div>
 
         <!-- Right: Contact Form -->
-        <div class="bg-[#1a1f3a]/50 border border-[#A898E9]/20 rounded-2xl p-8">
+        <div class="bg-dark-accent/50 border border-brand/20 rounded-2xl p-8">
           <form
             action="https://api.web3forms.com/submit"
             method="POST"
@@ -99,7 +99,7 @@ import { Icon } from "astro-icon/components";
                 id="name"
                 name="name"
                 required
-                class="w-full px-4 py-3 bg-[#0a0e1a] border border-[#A898E9]/30 rounded-lg text-white placeholder-gray-500 focus:border-[#A898E9] focus:outline-none focus:ring-2 focus:ring-[#A898E9]/20 transition"
+                class="w-full px-4 py-3 bg-dark-bg border border-brand/30 rounded-lg text-white placeholder-gray-500 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20 transition"
                 placeholder="John Doe" />
             </div>
 
@@ -111,7 +111,7 @@ import { Icon } from "astro-icon/components";
                 id="email"
                 name="email"
                 required
-                class="w-full px-4 py-3 bg-[#0a0e1a] border border-[#A898E9]/30 rounded-lg text-white placeholder-gray-500 focus:border-[#A898E9] focus:outline-none focus:ring-2 focus:ring-[#A898E9]/20 transition"
+                class="w-full px-4 py-3 bg-dark-bg border border-brand/30 rounded-lg text-white placeholder-gray-500 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20 transition"
                 placeholder="john@company.com" />
             </div>
 
@@ -124,7 +124,7 @@ import { Icon } from "astro-icon/components";
                 type="text"
                 id="organization"
                 name="organization"
-                class="w-full px-4 py-3 bg-[#0a0e1a] border border-[#A898E9]/30 rounded-lg text-white placeholder-gray-500 focus:border-[#A898E9] focus:outline-none focus:ring-2 focus:ring-[#A898E9]/20 transition"
+                class="w-full px-4 py-3 bg-dark-bg border border-brand/30 rounded-lg text-white placeholder-gray-500 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20 transition"
                 placeholder="Company Name" />
             </div>
 
@@ -136,14 +136,14 @@ import { Icon } from "astro-icon/components";
                 name="message"
                 required
                 rows="5"
-                class="w-full px-4 py-3 bg-[#0a0e1a] border border-[#A898E9]/30 rounded-lg text-white placeholder-gray-500 focus:border-[#A898E9] focus:outline-none focus:ring-2 focus:ring-[#A898E9]/20 transition resize-none"
+                class="w-full px-4 py-3 bg-dark-bg border border-brand/30 rounded-lg text-white placeholder-gray-500 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20 transition resize-none"
                 placeholder="Tell us about your project..."></textarea>
             </div>
 
             <!-- Submit Button -->
             <button
               type="submit"
-              class="w-full px-6 py-4 bg-[#A898E9] hover:bg-[#8B7BC9] text-white rounded-lg font-semibold transition-all shadow-lg shadow-[#A898E9]/20 flex items-center justify-center gap-2">
+              class="w-full px-6 py-4 bg-brand hover:bg-brand-dark text-white rounded-lg font-semibold transition-all shadow-lg shadow-[#A898E9]/20 flex items-center justify-center gap-2">
               <Icon class="w-5 h-5" name="bx:bx-send" />
               Send Message
             </button>
@@ -157,28 +157,28 @@ import { Icon } from "astro-icon/components";
   </section>
 
   <!-- Trust Section -->
-  <section class="py-24 bg-gradient-to-b from-[#0a0e1a] to-[#1a1f3a]">
+  <section class="py-24 bg-gradient-to-b from-dark-bg to-dark-accent">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-3 gap-8 text-center">
         <div>
-          <div class="w-16 h-16 rounded-full bg-[#A898E9]/20 flex items-center justify-center mx-auto mb-4">
-            <Icon class="w-8 h-8 text-[#A898E9]" name="bx:bx-time" />
+          <div class="w-16 h-16 rounded-full bg-brand/20 flex items-center justify-center mx-auto mb-4">
+            <Icon class="w-8 h-8 text-brand" name="bx:bx-time" />
           </div>
           <h3 class="text-xl font-semibold mb-2 text-white">24h Response Time</h3>
           <p class="text-gray-400">We respond to all inquiries within 24 hours</p>
         </div>
 
         <div>
-          <div class="w-16 h-16 rounded-full bg-[#A898E9]/20 flex items-center justify-center mx-auto mb-4">
-            <Icon class="w-8 h-8 text-[#A898E9]" name="bx:bx-shield" />
+          <div class="w-16 h-16 rounded-full bg-brand/20 flex items-center justify-center mx-auto mb-4">
+            <Icon class="w-8 h-8 text-brand" name="bx:bx-shield" />
           </div>
           <h3 class="text-xl font-semibold mb-2 text-white">Data Privacy</h3>
           <p class="text-gray-400">Your information is secure and confidential</p>
         </div>
 
         <div>
-          <div class="w-16 h-16 rounded-full bg-[#A898E9]/20 flex items-center justify-center mx-auto mb-4">
-            <Icon class="w-8 h-8 text-[#A898E9]" name="bx:bx-user-check" />
+          <div class="w-16 h-16 rounded-full bg-brand/20 flex items-center justify-center mx-auto mb-4">
+            <Icon class="w-8 h-8 text-brand" name="bx:bx-user-check" />
           </div>
           <h3 class="text-xl font-semibold mb-2 text-white">Expert Consultation</h3>
           <p class="text-gray-400">Speak directly with our technical team</p>

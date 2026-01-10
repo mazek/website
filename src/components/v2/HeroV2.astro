@@ -4,7 +4,7 @@ import { Icon } from "astro-icon/components";
 
 <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
   <!-- Animated background with particles -->
-  <div class="absolute inset-0 bg-gradient-to-b from-[#0a0e1a] via-[#1a1f3a] to-[#0a0e1a]">
+  <div class="absolute inset-0 bg-gradient-to-b from-dark-bg via-dark-accent to-dark-bg">
     <div class="stars"></div>
     <div class="stars2"></div>
     <div class="stars3"></div>
@@ -12,13 +12,13 @@ import { Icon } from "astro-icon/components";
 
   <!-- Content -->
   <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <div class="inline-block px-4 py-2 mb-6 rounded-full bg-[#A898E9]/10 border border-[#A898E9]/20">
-      <span class="text-[#A898E9] text-sm font-medium">✨ Next-Gen AI Infrastructure</span>
+    <div class="inline-block px-4 py-2 mb-6 rounded-full bg-brand/10 border border-brand/20">
+      <span class="text-brand text-sm font-medium">✨ Next-Gen AI Infrastructure</span>
     </div>
 
     <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
       Orchestrate Your Future with
-      <span class="block mt-2 bg-gradient-to-r from-[#A898E9] via-[#8B7BC9] to-[#A898E9] bg-clip-text text-transparent">
+      <span class="block mt-2 bg-gradient-to-r from-brand via-brand-dark to-brand bg-clip-text text-transparent">
         Sovereign AI
       </span>
     </h1>
@@ -31,13 +31,13 @@ import { Icon } from "astro-icon/components";
     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
       <a
         href="/v2/contact"
-        class="inline-flex items-center gap-2 px-8 py-4 bg-[#A898E9] hover:bg-[#8B7BC9] text-white rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg shadow-[#A898E9]/20">
+        class="inline-flex items-center gap-2 px-8 py-4 bg-brand hover:bg-brand-dark text-white rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg shadow-[#A898E9]/20">
         <Icon class="w-5 h-5" name="bx:bx-rocket" />
         Start Free Trial
       </a>
       <a
         href="#demo"
-        class="inline-flex items-center gap-2 px-8 py-4 bg-transparent border-2 border-[#A898E9]/30 hover:border-[#A898E9] text-white rounded-lg font-semibold transition-all">
+        class="inline-flex items-center gap-2 px-8 py-4 bg-transparent border-2 border-brand/30 hover:border-brand text-white rounded-lg font-semibold transition-all">
         <Icon class="w-5 h-5" name="bx:bx-play-circle" />
         Watch Demo
       </a>
@@ -46,22 +46,22 @@ import { Icon } from "astro-icon/components";
     <!-- Trust badges -->
     <div class="mt-16 flex flex-wrap justify-center items-center gap-8 opacity-60">
       <div class="flex items-center gap-2">
-        <Icon class="w-5 h-5 text-[#A898E9]" name="bx:bx-check-shield" />
+        <Icon class="w-5 h-5 text-brand" name="bx:bx-check-shield" />
         <span class="text-sm text-gray-400">GDPR Compliant</span>
       </div>
       <div class="flex items-center gap-2">
-        <Icon class="w-5 h-5 text-[#A898E9]" name="bx:bx-lock-alt" />
+        <Icon class="w-5 h-5 text-brand" name="bx:bx-lock-alt" />
         <span class="text-sm text-gray-400">On-Premises</span>
       </div>
       <div class="flex items-center gap-2">
-        <Icon class="w-5 h-5 text-[#A898E9]" name="bx:bx-rocket" />
+        <Icon class="w-5 h-5 text-brand" name="bx:bx-rocket" />
         <span class="text-sm text-gray-400">Deploy in 2 Weeks</span>
       </div>
     </div>
   </div>
 
   <!-- Gradient overlay at bottom -->
-  <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a0e1a] to-transparent"></div>
+  <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-dark-bg to-transparent"></div>
 </section>
 
 <style>

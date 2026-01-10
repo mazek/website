@@ -17,7 +17,7 @@ const solutions = [
 ];
 ---
 
-<section class="py-24 bg-[#0a0e1a] relative">
+<section class="py-24 bg-dark-bg relative">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Header -->
     <div class="text-center mb-16">
@@ -30,13 +30,13 @@ const solutions = [
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a
           href="/v2/products"
-          class="inline-flex items-center gap-2 px-8 py-3 bg-[#A898E9] hover:bg-[#8B7BC9] text-white rounded-lg font-semibold transition-all shadow-lg shadow-[#A898E9]/20">
+          class="inline-flex items-center gap-2 px-8 py-3 bg-brand hover:bg-brand-dark text-white rounded-lg font-semibold transition-all shadow-lg shadow-[#A898E9]/20">
           <Icon class="w-5 h-5" name="bx:bx-package" />
           View Platform
         </a>
         <a
           href="/v2/contact"
-          class="inline-flex items-center gap-2 px-8 py-3 bg-transparent border-2 border-[#A898E9]/30 hover:border-[#A898E9] text-white rounded-lg font-semibold transition-all">
+          class="inline-flex items-center gap-2 px-8 py-3 bg-transparent border-2 border-brand/30 hover:border-brand text-white rounded-lg font-semibold transition-all">
           <Icon class="w-5 h-5" name="bx:bx-calendar" />
           Schedule a Demonstration
         </a>
@@ -47,17 +47,17 @@ const solutions = [
     <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
       {
         solutions.map((solution) => (
-          <div class="group relative bg-[#1a1f3a]/50 hover:bg-[#1a1f3a] border border-[#A898E9]/10 hover:border-[#A898E9]/30 rounded-lg p-4 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer">
+          <div class="group relative bg-dark-accent/50 hover:bg-dark-accent border border-brand/10 hover:border-brand/30 rounded-lg p-4 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer">
             <div class="flex items-center gap-3">
-              <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-[#A898E9]/10 group-hover:bg-[#A898E9]/20 flex items-center justify-center transition-colors">
-                <Icon class="w-5 h-5 text-[#A898E9]" name={solution.icon} />
+              <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-brand/10 group-hover:bg-brand/20 flex items-center justify-center transition-colors">
+                <Icon class="w-5 h-5 text-brand" name={solution.icon} />
               </div>
               <span class="text-gray-300 group-hover:text-white transition-colors font-medium">
                 {solution.name}
               </span>
             </div>
             <!-- Hover glow effect -->
-            <div class="absolute inset-0 rounded-lg bg-[#A898E9]/5 opacity-0 group-hover:opacity-100 transition-opacity -z-10 blur-xl">
+            <div class="absolute inset-0 rounded-lg bg-brand/5 opacity-0 group-hover:opacity-100 transition-opacity -z-10 blur-xl">
             </div>
           </div>
         ))
@@ -68,7 +68,7 @@ const solutions = [
     <div class="mt-16 text-center">
       <p class="text-gray-400">
         Don't see your use case?
-        <a href="/v2/contact" class="text-[#A898E9] hover:text-[#8B7BC9] font-semibold ml-1 underline">
+        <a href="/v2/contact" class="text-brand hover:text-brand-dark font-semibold ml-1 underline">
           Contact us
         </a>
         for custom solutions
@@ -77,6 +77,6 @@ const solutions = [
   </div>
 
   <!-- Background decoration -->
-  <div class="absolute top-0 left-1/4 w-96 h-96 bg-[#A898E9]/5 rounded-full blur-3xl -z-10"></div>
-  <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-[#8B7BC9]/5 rounded-full blur-3xl -z-10"></div>
+  <div class="absolute top-0 left-1/4 w-96 h-96 bg-brand/5 rounded-full blur-3xl -z-10"></div>
+  <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-dark/5 rounded-full blur-3xl -z-10"></div>
 </section>
