@@ -1,0 +1,105 @@
+---
+import Container from "@/components/container.astro";
+import Link from "@/components/ui/link.astro";
+import Dropdown from "./dropdown.astro";
+import { Icon } from "astro-icon/components";
+import { StickyHeader, Astronav, MenuItems, MenuIcon } from "astro-navbar";
+
+const menuitems = [
+  {
+    title: "Products",
+    path: "/v1/products",
+  },
+  {
+    title: "About Us",
+    path: "/v1/about",
+  },
+  {
+    title: "Jobs",
+    path: "/v1/jobs",
+  },
+  {
+    title: "Contact",
+    path: "/v1/contact",
+  },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<StickyHeader
+  class="sticky top-0 border-b z-20 transition-all"
+  scrollY={130}
+  defaultClass="py-5 border-transparent"
+  activeClass="py-2 bg-white/80 border-gray-200 backdrop-blur-lg">
+  <Container>
+    <div
+      class="flex flex-col lg:flex-row justify-between items-center relative z-10"
+      transition:animate="none">
+      <Astronav>
+        <div class="flex w-full lg:w-auto items-center justify-between">
+          <a
+            href="/v1"
+            class="flex items-center transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#A898E9] focus-visible:outline-none focus-visible:shadow-outline-[#A898E9] rounded-full px-2 -ml-2">
+            <img src="/Bitropy-w.png" alt="Bitropy" class="h-12" />
+          </a>
+          <div class="block lg:hidden">
+            <MenuIcon class="w-4 h-4 text-gray-800" />
+          </div>
+        </div>
+        <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
+          <ul class="flex flex-col lg:flex-row lg:gap-3">
+            {
+              menuitems.map((item, index) => (
+                <>
+                  {item.children && (
+                    <Dropdown
+                      title={item.title}
+                      children={item.children}
+                      lastItem={index === menuitems.length - 1}
+                    />
+                  )}
+
+                  {!item.children && (
+                    <li>
+                      <a
+                        href={item.path}
+                        class:list={[
+                          "flex lg:px-3 py-2 text-base hover:text-[#A898E9] focus-visible:ring-2 focus-visible:ring-offset-2 transition focus-visible:ring-[#A898E9] focus-visible:outline-none focus-visible:shadow-outline-[#A898E9] rounded-full",
+                          currentPath === item.path || (item.path !== "/" && currentPath.startsWith(item.path))
+                            ? "bg-slate-100 text-gray-900"
+                            : "text-gray-600"
+                        ]}>
+                        {item.title}
+                      </a>
+                    </li>
+                  )}
+                </>
+              ))
+            }
+          </ul>
+        </MenuItems>
+      </Astronav>
+      <div>
+        <div class="hidden lg:flex items-center gap-4">
+          <a
+            href="https://www.linkedin.com/company/bitropy/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            class="text-gray-800 hover:text-[#A898E9] transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#A898E9] focus-visible:outline-none focus-visible:shadow-outline-[#A898E9] rounded-full p-2">
+            <Icon class="w-5 h-5" name="bx:bxl-linkedin" />
+          </a>
+          <a
+            href="https://github.com/orgs/Bitropy/"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            class="text-gray-800 hover:text-[#A898E9] transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#A898E9] focus-visible:outline-none focus-visible:shadow-outline-[#A898E9] rounded-full p-2">
+            <Icon class="w-5 h-5" name="bx:bxl-github" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </Container>
+</StickyHeader>
